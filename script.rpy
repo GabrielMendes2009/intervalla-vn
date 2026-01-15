@@ -16,6 +16,8 @@ image bg train_night = "images/bg/train_night.jpg"
 image bg station_intervalla = "images/bg/station_intervalla.jpg"
 image by white_room = "images/bg/dream.png"
 image bg memory_park = "images/bg/memory_park.png"
+image bg memory_hospital = "images/bg/memory_hospital.png"
+image bg memory_future = "images/bg/memory_future.png"
 
 # Variáveis de Estado
 default solidez = 0
