@@ -10,7 +10,9 @@ image bg train_interior = "images/bg/train_interior.jpg"
 image bg black = "images/bg/black.jpg"
 image bg school_rain = "images/bg/school_rain.jpg"
 image bg classroom = "images/bg/classroom.png"
-image bg school_corridor = "images/bg/corridor.jpg"
+image bg school_corridor = "images/bg/school_corridor.jpg"
+image bg dream = "images/bg/dream.png"
+image bg train_night = "images/bg/train_night.jpg"
 
 # Variáveis de Estado
 default solidez = 0
