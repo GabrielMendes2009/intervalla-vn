@@ -6,6 +6,11 @@ define cy = Character("Cain (Jovem)", color="#f1948a")
 define cw = Character("Cain (Fraco)", color="#d98880")
 define ca = Character("Cain (Adulto)", color="#c0392b")
 define p = Character("Passageiro", color="#7f8c8d")
+image bg train_interior = "images/bg/train_interior.jpg"
+image bg black = "images/bg/black.jpg"
+image bg school_rain = "images/bg/school_rain.jpg"
+image bg classroom = "images/bg/classroom.png"
+image bg school_corridor = "images/bg/corridor.jpg"
 
 # Variáveis de Estado
 default solidez = 0
