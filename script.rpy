@@ -6,6 +6,8 @@ define cy = Character("Cain (Jovem)", color="#f1948a")
 define cw = Character("Cain (Fraco)", color="#d98880")
 define ca = Character("Cain (Adulto)", color="#c0392b")
 define p = Character("Passageiro", color="#7f8c8d")
+
+# Imagens de Fundo
 image bg train_interior = "images/bg/train_interior.jpg"
 image bg black = "images/bg/black.jpg"
 image bg school_rain = "images/bg/school_rain.jpg"
@@ -18,6 +20,9 @@ image bg white_room = "images/bg/dream.png"
 image bg memory_park = "images/bg/memory_park.png"
 image bg memory_hospital = "images/bg/memory_hospital.png"
 image bg memory_future = "images/bg/memory_future.png"
+
+# Imagens de Personagens
+image cain calm_smile = "images/cain/calm_smile.png"
 
 # Variáveis de Estado
 default solidez = 0
