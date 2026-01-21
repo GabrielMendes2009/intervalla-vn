@@ -31,7 +31,7 @@ image cain adult_happy = "images/cain/cain_adult_happy.png"
 image cain weak = "images/cain/cain_weak.png"
 image cain solid = "images/cain/cain_solid.png"
 image ari young_distracted = "images/ari/ari_young_distracted.png"
-image staff serious = "images/staff/staff_serious.png"
+image staff serious = "images/cain/staff_serious.png"
 
 # Variáveis de Estado
 default solidez = 0
