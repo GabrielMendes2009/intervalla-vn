@@ -134,7 +134,8 @@ label rupturas_expandidas:
     "E então, os sonhos começaram. Sonhos que pareciam mais reais que a própria vida."
     "Eu estava em um lugar sem cor, e Cain estava lá, estendendo a mão."
     
-    show cain hand_out at center
+    show cain hand_out at center:
+        alpha 0.8
     c "Não demora, Ari. O intervalo é curto, e o esquecimento é rápido."
     c "Se você não vier agora, não sobrará nada de mim para você salvar."
     
@@ -168,8 +169,9 @@ label a_travessia_detalhada:
     "Vi pessoas sentadas nos bancos. Elas pareciam feitas de fumaça. Seus olhos eram buracos vazios, olhando para um horizonte que não existia."
     "E no final da plataforma, sentado sozinho..."
     
-    show cain blurred at center with dissolve
-    
+    show cain blurred at center with dissolve:
+        alpha 0.6
+
     a "Cain?"
     
     c "Você demorou, Ari. Eu já estava começando a perder a cor das minhas próprias mãos."
