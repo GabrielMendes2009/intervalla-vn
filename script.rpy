@@ -23,6 +23,15 @@ image bg memory_future = "images/bg/memory_future.png"
 
 # Imagens de Personagens
 image cain calm_smile = "images/cain/calm_smile.png"
+image cain laugh = "images/cain/cain_laugh.png"
+image cain blurred = "images/cain/cain_blurred.png"
+image cain hand_out = "images/cain/cain_hand_out.png"
+image cain young_sad = "images/cain/cain_young_sad.png"
+image cain adult_happy = "images/cain/cain_adult_happy.png"
+image cain weak = "images/cain/cain_weak.png"
+image cain solid = "images/cain/cain_solid.png"
+image ari young_distracted = "images/ari/ari_young_distracted.png"
+image staff serious = "images/staff/staff_serious.png"
 
 # Variáveis de Estado
 default solidez = 0
