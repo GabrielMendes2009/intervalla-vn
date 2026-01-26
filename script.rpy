@@ -1,5 +1,5 @@
 ﻿# Definições de Personagens
-define a = Character("Ari", color="#3498db")
+define a = Character("Haruto", color="#3498db")
 define c = Character("Cain", color="#e74c3c")
 define f = Character("Funcionária", color="#95a5a6")
 define cy = Character("Cain (Jovem)", color="#f1948a")
@@ -57,18 +57,18 @@ label start:
     "Cain. Meu melhor amigo. Ou o que restou dele depois de um verão de silêncio absoluto."
     "Ele não parece o garoto que ignorou minhas mensagens por três meses. Ele parece... em paz. Uma paz que me incomoda."
     
-    c "Ari. Eu sabia que você estaria nesse vagão. Você é uma criatura de hábitos, não é?"
+    c "Haruto. Eu sabia que você estaria nesse vagão. Você é uma criatura de hábitos, não é?"
     
     menu:
         "Por que você sumiu?":
             $ conversou_trem = True
             a "Hábitos? Você fala de hábitos depois de desaparecer da face da terra? Eu quase fui até a sua casa, Cain. Eu achei que você tinha se cansado de mim."
-            c "Eu nunca me cansaria de você, Ari. É que... às vezes o ruído do mundo fica alto demais. Eu precisei de silêncio para conseguir ouvir o que realmente importava."
+            c "Eu nunca me cansaria de você, Haruto. É que... às vezes o ruído do mundo fica alto demais. Eu precisei de silêncio para conseguir ouvir o que realmente importava."
             a "E o que importava não incluía me responder?"
             c "Pelo contrário. Incluía me preparar para falar com você hoje."
         "Você parece diferente.":
             a "Você está... estranho, Cain. Não é o seu jeito de sempre. Onde está o sarcasmo? Onde está a reclamação sobre o sono?"
-            c "Eu deixei essas coisas no verão, Ari. Elas pesavam demais. Você não acha que a gente gasta muito tempo sendo infeliz por hábito?"
+            c "Eu deixei essas coisas no verão, Haruto. Elas pesavam demais. Você não acha que a gente gasta muito tempo sendo infeliz por hábito?"
             a "Eu acho que a gente gasta tempo sendo humano. E humanos reclamam."
             c "Talvez. Mas hoje, eu só quero observar. Olhe para essas pessoas... cada uma carregando um universo que vai desaparecer um dia."
 
@@ -81,14 +81,14 @@ label start:
     
     show cain laugh with dissolve
     c "Hahaha! Eu sabia. Eu apostei comigo mesmo que você corrigiria a gramática antes de agradecer pelo presente."
-    c "Mas e se eu não estiver errado, Ari? E se a memória for a única coisa que realmente pode salvar alguém?"
+    c "Mas e se eu não estiver errado, Haruto? E se a memória for a única coisa que realmente pode salvar alguém?"
     
     a "Salvar de quê?"
     
     c "Do nada. Do vazio que fica quando a gente para de ocupar espaço no mundo."
     
     "O trem freia. A estação dele chegou."
-    c "A gente se vê por aí, Ari. Não esqueça de marcar a página. É importante saber onde você parou."
+    c "A gente se vê por aí, Haruto. Não esqueça de marcar a página. É importante saber onde você parou."
     
     scene bg black with fade
     stop music fadeout 2.0
@@ -136,7 +136,7 @@ label rupturas_expandidas:
     
     show cain hand_out at center:
         alpha 0.8
-    c "Não demora, Ari. O intervalo é curto, e o esquecimento é rápido."
+    c "Não demora, Haruto. O intervalo é curto, e o esquecimento é rápido."
     c "Se você não vier agora, não sobrará nada de mim para você salvar."
     
     jump a_travessia_detalhada
@@ -174,7 +174,7 @@ label a_travessia_detalhada:
 
     a "Cain?"
     
-    c "Você demorou, Ari. Eu já estava começando a perder a cor das minhas próprias mãos."
+    c "Você demorou, Haruto. Eu já estava começando a perder a cor das minhas próprias mãos."
     
     a "O que é este lugar? Eu morri também?"
     
@@ -214,7 +214,7 @@ label dungeon_palavras:
     show cain young_sad at left
     show ari young_distracted at right
 
-    cy "Ari… você já parou pra pensar que talvez a gente esteja correndo demais?"
+    cy "Haruto… você já parou pra pensar que talvez a gente esteja correndo demais?"
     cy "Todo mundo fala de futuro como se ele fosse garantido."
     cy "Mas e se não for?"
 
@@ -243,7 +243,7 @@ label dungeon_palavras:
             "Cain abaixa a cabeça."
             "A sombra dele se alonga no chão, como se estivesse sendo engolida."
 
-            cy "Eu não queria respostas, Ari."
+            cy "Eu não queria respostas, Haruto."
             cy "Eu só queria que você me escutasse."
 
             "A imagem dele perde saturação."
@@ -310,7 +310,7 @@ label dungeon_medo:
     cw "Ela vai sobreviver."
     cw "As pessoas sempre sobrevivem."
 
-    cw "Mas e você, Ari?"
+    cw "Mas e você, Haruto?"
     cw "Você vai me transformar em uma história bonita?"
     cw "Ou vai lembrar de mim como eu realmente fui?"
 
@@ -375,7 +375,7 @@ label dungeon_saudade:
 
     show cain adult_happy at center
 
-    ca "Olha isso, Ari!"
+    ca "Olha isso, Haruto!"
     ca "A gente conseguiu."
     ca "Sem hospitais. Sem despedidas."
 
@@ -456,7 +456,7 @@ label coracao_intervalo:
 
 label final_bom:
     show cain solid at center with dissolve
-    c "Ari. Você conseguiu. Você atravessou o lodo das nossas falhas e não soltou a minha mão."
+    c "Haruto. Você conseguiu. Você atravessou o lodo das nossas falhas e não soltou a minha mão."
     a "Eu entendi agora, Cain. O marcador... {i}Memoria te servat{/i}. A memória me salva porque ela me obriga a ser honesto."
     a "Eu não vou te esquecer. Mas eu também não vou ficar preso no que poderia ter sido."
 
@@ -473,6 +473,6 @@ label final_bom:
 label final_ruim:
     "O mundo ao redor se torna estático. O tempo para."
     "Cain me olha com uma tristeza infinita."
-    c "Ari... você não deveria ter escolhido isso."
+    c "Haruto... você não deveria ter escolhido isso."
     "Mas agora, somos apenas dois vultos sentados num banco, esperando o esquecimento chegar."
     return
