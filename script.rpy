@@ -487,7 +487,7 @@ label final_ruim:
 transform credits_scroll:
     xalign 0.5
     ypos 1200
-    linear 80 ypos -2800
+    linear 115 ypos -2800
 
 screen rolling_credits():
 
@@ -508,7 +508,7 @@ screen rolling_credits():
         text "Gabriel Mendes" size 40 xalign 0.5
         text "github.com/GabrielMendes2009" size 30 xalign 0.5
         text "Manuel Miranda" size 40 xalign 0.5
-        text "github.com/manuelmiranda" size 30 xalign 0.5
+        text "github.com/manuelm11-bit" size 30 xalign 0.5
 
         null height 100
 
@@ -519,7 +519,17 @@ screen rolling_credits():
         null height 100
 
         text "Música & Áudio" size 50 xalign 0.5
-        text "Créditos aos respectivos autores" size 36 xalign 0.5
+        text "DELOSound" size 40 xalign 0.5
+        text "Cracious" size 40 xalign 0.5
+        text "Universfield" size 40 xalign 0.5
+        text "freesound_community" size 40 xalign 0.5
+        text "Lorien Testard" size 40 xalign 0.5
+
+        null height 100
+
+        text "Programação" size 50 xalign 0.5
+        text "Gabriel Mendes" size 40 xalign 0.5
+        text "github.com/GabrielMendes2009" size 30 xalign 0.5
 
         null height 100
 
@@ -543,4 +553,4 @@ screen rolling_credits():
 
         null height 600
 
-    timer 85 action Quit(confirm=False)
+    timer 120 action Quit(confirm=False)
