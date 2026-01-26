@@ -30,7 +30,7 @@ image cain young_sad = "images/cain/cain_young_sad.png"
 image cain adult_happy = "images/cain/cain_adult_happy.png"
 image cain weak = "images/cain/cain_weak.png"
 image cain solid = "images/cain/cain_solid.png"
-image ari young_distracted = "images/ari/ari_young_distracted.png"
+image ari young_distracted = "images/cain/ari_young_distracted.png"
 image staff serious = "images/cain/staff_serious.png"
 
 # Variáveis de Estado
@@ -155,7 +155,7 @@ label a_travessia_detalhada:
     stop music
     "O trem parou com um solavanco que me jogou para frente."
     
-    scene bg black with flash
+    scene bg black
     "Quando abri os olhos, o vagão estava vazio. Não havia passageiros. Não havia anúncios."
     "Apenas uma luz fria, azulada, vindo de fora."
     
