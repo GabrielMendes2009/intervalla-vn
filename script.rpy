@@ -468,6 +468,9 @@ label final_bom:
     scene bg train_interior with fade
     "Memoria te servat."
 
+    play music "audio/credits_theme.mp3" fadein 2.0
+    call screen rolling_credits
+
     return
 
 label final_ruim:
@@ -475,4 +478,69 @@ label final_ruim:
     "Cain me olha com uma tristeza infinita."
     c "Haruto... você não deveria ter escolhido isso."
     "Mas agora, somos apenas dois vultos sentados num banco, esperando o esquecimento chegar."
+
+    play music "audio/credits_theme.mp3" fadein 2.0
+    call screen rolling_credits
+
     return
+
+transform credits_scroll:
+    xalign 0.5
+    ypos 1200
+    linear 80 ypos -2800
+
+screen rolling_credits():
+
+    tag credits
+
+    add Solid("#000")
+
+    vbox:
+        xalign 0.5
+        spacing 50
+        at credits_scroll
+
+        text "CRÉDITOS" size 80 xalign 0.5
+
+        null height 120
+
+        text "Roteiro & Direção" size 50 xalign 0.5
+        text "Gabriel Mendes" size 40 xalign 0.5
+        text "github.com/GabrielMendes2009" size 30 xalign 0.5
+        text "Manuel Miranda" size 40 xalign 0.5
+        text "github.com/manuelmiranda" size 30 xalign 0.5
+
+        null height 100
+
+        text "Arte" size 50 xalign 0.5
+        text "Milkology8" size 40 xalign 0.5
+        text "@g.ngyu" size 30 xalign 0.5
+
+        null height 100
+
+        text "Música & Áudio" size 50 xalign 0.5
+        text "Créditos aos respectivos autores" size 36 xalign 0.5
+
+        null height 100
+
+        text "Engine" size 50 xalign 0.5
+        text "Ren'Py" size 40 xalign 0.5
+
+        null height 140
+
+        text "Obrigado por jogar" size 60 xalign 0.5
+
+        null height 80
+
+        text "Enquanto alguém se lembra…" size 36 xalign 0.5
+        text "ninguém desaparece de verdade." size 36 xalign 0.5
+
+        null height 200
+
+        add "images/bg/ending_image.png":
+            xalign 0.5
+            alpha 0.95
+
+        null height 600
+
+    timer 85 action Quit(confirm=False)
