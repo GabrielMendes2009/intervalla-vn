@@ -48,147 +48,582 @@ label start:
     scene bg train_interior with fade
     play music "audio/train_ambience.mp3" loop
     
-    "O som rítmico das rodas do trem contra os trilhos sempre foi o metrônomo da minha vida. Mas hoje, o ritmo parece... fora de compasso."
-    "As aulas recomeçam. O ar dentro do vagão está pesado com o cheiro de café barato e o hálito de gente que ainda não acordou para o mundo."
-    "Eu seguro meu livro de latim como se fosse um escudo. {i}Grammatica Latina{/i}. Palavras mortas para um mundo que insiste em seguir em frente."
+    "O som rítmico das rodas do trem contra os trilhos sempre foi o metrônomo da minha vida."
+    "Mas hoje, o ritmo parece... fora de compasso."
+    "As aulas recomeçam."
+    "O ar dentro do vagão está pesado com o cheiro de café barato e o hálito de gente que ainda não acordou para o mundo."
     
-    "Procuro um lugar vazio, mas meus olhos travam em um ponto específico."
+    "Eu seguro meu livro de latim como se fosse um escudo."
+    "{i}Grammatica Latina{/i}."
+    "Palavras mortas para um mundo que insiste em seguir em frente."
+
+    "Procuro um lugar vazio."
+    "Não encontro."
+    "Mas meus olhos travam em um ponto específico."
+
     "Lá está ele."
-    
+
     show cain calm_smile at center with dissolve
-    
-    "Cain. Meu melhor amigo. Ou o que restou dele depois de um verão de silêncio absoluto."
-    "Ele não parece o garoto que ignorou minhas mensagens por três meses. Ele parece... em paz. Uma paz que me incomoda."
-    
-    c "Haruto. Eu sabia que você estaria nesse vagão. Você é uma criatura de hábitos, não é?"
-    
+
+    "Cain."
+    "Meu melhor amigo."
+    "Ou o que restou dele depois de um verão de silêncio absoluto."
+
+    "Ele não parece o garoto que ignorou minhas mensagens por três meses."
+    "Ele parece... em paz."
+    "Uma paz que me incomoda."
+
+    c "Haruto."
+    c "Eu sabia que você estaria nesse vagão."
+    c "Você é uma criatura de hábitos, não é?"
+
     menu:
         "Por que você sumiu?":
             $ conversou_trem = True
-            a "Hábitos? Você fala de hábitos depois de desaparecer da face da terra? Eu quase fui até a sua casa, Cain. Eu achei que você tinha se cansado de mim."
-            c "Eu nunca me cansaria de você, Haruto. É que... às vezes o ruído do mundo fica alto demais. Eu precisei de silêncio para conseguir ouvir o que realmente importava."
-            a "E o que importava não incluía me responder?"
-            c "Pelo contrário. Incluía me preparar para falar com você hoje."
-        "Você parece diferente.":
-            a "Você está... estranho, Cain. Não é o seu jeito de sempre. Onde está o sarcasmo? Onde está a reclamação sobre o sono?"
-            c "Eu deixei essas coisas no verão, Haruto. Elas pesavam demais. Você não acha que a gente gasta muito tempo sendo infeliz por hábito?"
-            a "Eu acho que a gente gasta tempo sendo humano. E humanos reclamam."
-            c "Talvez. Mas hoje, eu só quero observar. Olhe para essas pessoas... cada uma carregando um universo que vai desaparecer um dia."
+            $ haruto_magoado = True
 
-    "Ele estende a mão e me entrega um pequeno objeto. Um marcador de página feito de papel grosso, com bordas cuidadosamente cortadas."
-    "No centro, uma caligrafia elegante, mas com um erro que me faz sorrir involuntariamente."
-    
+            a "Hábitos?"
+            a "Você fala de hábitos depois de desaparecer da face da terra?"
+            a "Eu quase fui até a sua casa, Cain."
+            a "Por um tempo, eu realmente achei que você tinha se cansado de mim."
+
+            c "…"
+            c "Eu nunca me cansaria de você."
+            c "Mas às vezes o ruído do mundo fica alto demais."
+            c "Alto a ponto de a gente não conseguir escutar nem a própria respiração."
+
+            a "E o silêncio incluía me ignorar?"
+
+            c "Incluía me preparar."
+            c "Algumas conversas não podem acontecer pela tela de um celular."
+            c "Elas precisam de… presença."
+
+        "Você parece diferente.":
+            $ haruto_observador = True
+
+            a "Você está estranho, Cain."
+            a "Onde está o sarcasmo?"
+            a "A reclamação sobre o sono?"
+            a "Você parece… mais leve."
+
+            c "Eu deixei essas coisas no verão."
+            c "Elas pesavam demais."
+
+            a "Ser infeliz virou bagagem agora?"
+
+            c "Virou excesso."
+            c "Você não acha que a gente passa tempo demais sofrendo por hábito?"
+
+            a "Eu acho que a gente passa tempo sendo humano."
+            a "E humanos reclamam."
+
+            c "Talvez."
+            c "Mas hoje…"
+            c "Hoje eu só quero observar."
+
+    c "Olhe para essas pessoas, Haruto."
+    c "Cada uma carregando um universo inteiro."
+    c "E, ainda assim…"
+    c "Todos temporários."
+
+    "Ele enfia a mão no bolso do casaco."
+    "Por um instante, acho que ele vai tirar o celular."
+    "Mas não."
+
+    "Ele estende a mão."
+    "Um pequeno objeto repousa na palma."
+
+    "Um marcador de página feito de papel grosso."
+    "As bordas foram cortadas com cuidado."
+    "Há algo de íntimo nisso."
+    "Algo feito com tempo."
+
     "{i}“Memoria te servat.”{/i}"
-    
-    a "Cain... você sabe que isso está errado, né? {i}Servat{/i} é salvar ou preservar. Se você queria dizer que a memória me mantém, deveria ser {i}tenet{/i}."
-    
+
+    a "Cain…"
+    a "Você sabe que isso está errado, né?"
+    a "{i}Servat{/i} é preservar."
+    a "Se você queria dizer que a memória me mantém, deveria ser {i}tenet{/i}."
+
     show cain laugh with dissolve
-    c "Hahaha! Eu sabia. Eu apostei comigo mesmo que você corrigiria a gramática antes de agradecer pelo presente."
-    c "Mas e se eu não estiver errado, Haruto? E se a memória for a única coisa que realmente pode salvar alguém?"
-    
+
+    c "Hahaha!"
+    c "Eu sabia."
+    c "Apostei comigo mesmo que você corrigiria a gramática antes de agradecer."
+
+    a "Você me conhece demais."
+
+    c "Ou talvez eu só tenha prestado atenção."
+
+    c "Mas e se eu não estiver errado, Haruto?"
+    c "E se a memória for a única coisa que realmente pode salvar alguém?"
+
     a "Salvar de quê?"
-    
-    c "Do nada. Do vazio que fica quando a gente para de ocupar espaço no mundo."
-    
-    "O trem freia. A estação dele chegou."
-    c "A gente se vê por aí, Haruto. Não esqueça de marcar a página. É importante saber onde você parou."
-    
+
+    show cain calm_smile with dissolve
+
+    c "Do nada."
+    c "Do vazio que fica quando a gente para de ocupar espaço no mundo."
+
+    "O trem freia."
+    "O impacto reverbera pelo vagão."
+    "A estação dele."
+
+    c "Eu preciso ir."
+
+    a "Cain—"
+
+    c "A gente se vê por aí, Haruto."
+    c "Não esqueça de marcar a página."
+    c "É importante saber onde você parou."
+
+    hide cain with dissolve
+
     scene bg black with fade
     stop music fadeout 2.0
-    
-    "Eu não sabia, mas aquela foi a última vez que o vi respirar o mesmo ar que eu."
+
+    "Eu não sabia."
+    "Mas aquela foi a última vez que o vi respirar o mesmo ar que eu."
 
 label dia_seguinte:
     scene bg school_rain with fade
     play music "audio/sad_piano.mp3" loop
-    
-    "O dia seguinte veio com uma chuva fina, daquelas que não molham a terra, mas esfriam a alma."
-    "A escola parecia um funeral antes mesmo do anúncio. O silêncio nos corredores era denso, quase sólido."
-    
+
+    "A chuva caía fina."
+    "Daquelas que não chegam a lavar a rua."
+    "Só deixam tudo frio."
+    "Inacabado."
+
+    "A escola parecia um funeral antes mesmo do anúncio."
+    "Passos ecoavam demais."
+    "Portas fechavam baixo demais."
+    "O silêncio nos corredores era denso."
+    "Quase sólido."
+
     scene bg classroom with dissolve
-    "Eu estava sentado na minha mesa, olhando para o lugar vazio ao meu lado. O lugar de Cain."
-    "A porta da sala se abriu com um rangido que pareceu um grito."
-    
+
+    "Eu estava sentado na minha mesa."
+    "Olhando para o lugar vazio ao meu lado."
+    "O lugar de Cain."
+
+    "Meu corpo ainda esperava que ele chegasse atrasado."
+    "Que reclamasse da chuva."
+    "Que fizesse algum comentário inútil só para quebrar o clima."
+
+    "A porta da sala se abriu."
+    "O rangido ecoou."
+    "Alto demais."
+    "Como um grito em um quarto vazio."
+
     show staff serious at center
-    f "Alunos... por favor, prestem atenção."
-    "A voz dela tremia. Ela não olhava para ninguém."
-    f "Recebemos uma notícia muito triste esta manhã. O aluno Cain... ele faleceu ontem à noite, em sua casa."
-    
-    "O mundo não parou. Ele simplesmente se quebrou."
-    "Ouvi soluços. Ouvi alguém deixar uma caneta cair. Mas para mim, o som foi de vidro estilhaçando dentro dos meus ouvidos."
-    
-    a "(Não... ontem ele estava no trem. Ele sorriu. Ele me deu o marcador...)"
-    a "(Ele estava se despedindo. Ele sabia. Ele sabia e eu estava corrigindo o latim dele!)"
-    
-    "A culpa é uma substância ácida. Ela corrói a memória até que tudo o que sobra é o arrependimento."
+
+    f "Alunos..."
+    f "Por favor, prestem atenção."
+
+    "A voz dela tremia."
+    "Ela não olhava para ninguém."
+    "Seus olhos estavam fixos em um ponto qualquer da parede."
+    "Como se encarar a gente tornasse aquilo real demais."
+
+    f "Recebemos uma notícia muito triste esta manhã."
+
+    "Meu estômago afundou."
+    "Antes mesmo do nome."
+
+    f "O aluno Cain..."
+    f "Ele faleceu ontem à noite."
+    f "Em sua casa."
+
+    "O mundo não parou."
+    "Ele não explodiu."
+    "Ele simplesmente… se quebrou."
+
+    "Ouvi alguém soluçar."
+    "Ouvi uma cadeira arrastar."
+    "Uma caneta caiu no chão."
+
+    "Mas para mim—"
+    "Foi como vidro estilhaçando dentro dos meus ouvidos."
+
+    a "(Não.)"
+    a "(Não, não, não.)"
+
+    a "(Ontem ele estava no trem.)"
+    a "(Ele sorriu.)"
+    a "(Ele me entregou o marcador.)"
+
+    a "(Ele estava se despedindo.)"
+    a "(Ele sabia.)"
+    a "(Ele sabia e eu estava corrigindo o latim dele.)"
+
+    menu:
+        "…":
+            $ culpa_haruto = True
+
+            "Eu apertei o marcador dentro do bolso."
+            "As bordas de papel machucaram meus dedos."
+            "Não o suficiente."
+
+            a "(Se eu tivesse perguntado mais.)"
+            a "(Se eu tivesse ido atrás.)"
+            a "(Se eu tivesse percebido.)"
+
+        "Não pensar.":
+            $ negacao_haruto = True
+
+            "Eu encarei a lousa."
+            "Os números escritos nela não faziam sentido."
+            "Nada fazia."
+
+            a "(Isso não está acontecendo.)"
+            a "(Isso não pode estar acontecendo.)"
+
+    "A professora continuava falando."
+    "Palavras sobre luto."
+    "Apoio psicológico."
+    "Minuto de silêncio."
+
+    "Eu não ouvi nada."
+
+    "O lugar ao meu lado permanecia vazio."
+    "E, pela primeira vez…"
+    "Eu entendi que sempre estaria."
+
+    "A culpa é uma substância ácida."
+    "Ela não grita."
+    "Ela não sangra."
+
+    "Ela corrói a memória."
+    "Aos poucos."
+    "Até que tudo o que sobra…"
+    "É arrependimento."
+
+    scene bg black with fade
+    stop music fadeout 2.0
 
     jump rupturas_expandidas
 
 label rupturas_expandidas:
     scene bg school_corridor with fade
-    "Os dias que se seguiram foram um borrão de cinza. Eu via o rosto dele em cada sombra."
-    "Na biblioteca, eu jurava ouvir o som da risada dele entre as estantes de história."
-    "No reflexo da janela do ônibus, por um milésimo de segundo, ele estava lá, sentado no banco de trás, olhando para a rua."
-    
-    "Mas quando eu piscava, o assento estava vazio."
-    "Eu estava ficando louco? Ou o mundo estava se recusando a aceitar que ele tinha ido?"
-    
+
+    "Os dias que se seguiram foram um borrão de cinza."
+    "Não havia manhã."
+    "Não havia noite."
+    "Só intervalos."
+
+    "Eu via o rosto dele em cada sombra."
+    "Não como um fantasma."
+    "Como um erro."
+    "Algo que o mundo esqueceu de apagar."
+
+    "Na biblioteca, eu jurava ouvir a risada dele entre as estantes de história."
+    "Baixa."
+    "Cúmplice."
+    "A mesma risada que surgia quando eu errava uma tradução óbvia."
+
+    "Eu virei a cabeça."
+    "As estantes estavam imóveis."
+    "Antigas."
+    "Indiferentes."
+
+    "Mas o som ficou."
+    "Por tempo demais."
+
+    "No reflexo da janela do ônibus—"
+    "Por um milésimo de segundo—"
+    "Ele estava lá."
+
+    "Sentado no banco de trás."
+    "O cotovelo apoiado."
+    "O olhar perdido na rua, como se o mundo ainda estivesse acontecendo para ele."
+
+    "Meu coração disparou."
+
+    "Eu pisquei."
+
+    "O assento estava vazio."
+
+    "O reflexo… também."
+
+    "Eu engoli em seco."
+
+    "Eu estava ficando louco?"
+    "Ou o mundo estava se recusando a aceitar que ele tinha ido?"
+
     scene bg dream with dissolve
-    "E então, os sonhos começaram. Sonhos que pareciam mais reais que a própria vida."
-    "Eu estava em um lugar sem cor, e Cain estava lá, estendendo a mão."
-    
+
+    "O primeiro sonho veio sem aviso."
+    "Sem lógica."
+    "Sem cor."
+
+    "Não era escuro."
+    "Era… desbotado."
+    "Como uma fotografia esquecida ao sol."
+
+    "Eu estava em um lugar sem chão."
+    "Sem céu."
+    "Sem direção."
+
+    "E Cain estava lá."
+
+    "Não como uma lembrança."
+    "Mas como presença."
+
     show cain hand_out at center:
         alpha 0.8
-    c "Não demora, Haruto. O intervalo é curto, e o esquecimento é rápido."
-    c "Se você não vier agora, não sobrará nada de mim para você salvar."
-    
+
+    "Ele parecia incompleto."
+    "Levemente desfocado nas bordas."
+    "Como se não tivesse sido totalmente renderizado."
+
+    c "Não demora, Haruto."
+
+    "A voz dele não ecoava."
+    "Ela surgia dentro da minha cabeça."
+
+    c "O intervalo é curto."
+    c "E o esquecimento é rápido."
+
+    "Meu corpo queria correr."
+    "Mas não havia para onde."
+
+    c "Se você não vier agora…"
+
+    "Ele deu um passo à frente."
+    "O mundo ao redor dele tremeu."
+    "Como um arquivo corrompido sendo aberto."
+
+    c "…não sobrará nada de mim."
+    c "Nada que você possa salvar."
+
+    menu:
+        "Estender a mão.":
+            $ travessia_aceita = True
+
+            "Meu braço se moveu antes do pensamento."
+            "Antes do medo."
+            "Antes da razão."
+
+            "Quando nossos dedos quase se tocaram—"
+            "O mundo perdeu o peso."
+
+        "Ficar parado.":
+            $ travessia_hesitacao = True
+
+            "Eu congelei."
+            "O chão parecia distante demais."
+            "Meu corpo pesado demais."
+
+            "O rosto de Cain escureceu por um instante."
+            "Não de raiva."
+            "De urgência."
+
+    c "Por favor."
+
+    "A palavra foi fraca."
+    "Humana."
+    "Errada demais para um sonho."
+
+    "Acordei com o coração disparado."
+    "Com o nome dele preso na garganta."
+    "E a sensação terrível de que…"
+
+    "Eu tinha acabado de perder algo."
+    "De novo."
+
     jump a_travessia_detalhada
 
 label a_travessia_detalhada:
     scene bg train_night with fade
-    "Uma semana depois. O mesmo trem. O mesmo horário."
-    "Eu abri o livro de latim. O marcador estava na página 112. Onde eu parei no dia em que ele morreu."
-    
-    "As palavras na página pareciam se mover. Elas se rearranjavam diante dos meus olhos."
+    play music "audio/train_ambience.mp3" loop
+
+    "Uma semana depois."
+    "O mesmo trem."
+    "O mesmo horário."
+
+    "Era para ser reconfortante."
+    "Não foi."
+
+    "Eu abri o livro de latim."
+    "O marcador ainda estava lá."
+    "Página 112."
+    "Onde eu parei no dia em que ele morreu."
+
+    "Eu não lembrava de ter fechado o livro depois disso."
+
+    "Minhas mãos tremiam levemente."
+    "Não de frio."
+    "De antecipação."
+
+    "As palavras na página pareciam… inquietas."
+    "Elas não ficavam no lugar."
+
     "{i}“Inter vivos et mortuos.”{/i}"
-    
-    "O trem entrou no túnel. Mas desta vez, a escuridão não passou."
-    "As luzes do vagão começaram a piscar violentamente. O som do motor foi substituído por um silêncio absoluto, vácuo puro."
-    
+
+    "Entre os vivos e os mortos."
+
+    "Eu não lembrava dessa frase estar ali."
+
+    "O trem entrou no túnel."
+
+    "A escuridão engoliu as janelas—"
+    "Mas desta vez…"
+    "Ela não passou."
+
+    "As luzes do vagão começaram a piscar."
+    "Não como uma falha elétrica."
+    "Como um aviso."
+
+    "O som constante do motor se quebrou."
+    "Primeiro em estática."
+    "Depois em nada."
+
     stop music
-    "O trem parou com um solavanco que me jogou para frente."
-    
-    scene bg black
-    "Quando abri os olhos, o vagão estava vazio. Não havia passageiros. Não havia anúncios."
-    "Apenas uma luz fria, azulada, vindo de fora."
-    
+
+    "O silêncio foi tão absoluto que meus ouvidos doeram."
+    "Vácuo puro."
+
+    "O trem parou com um solavanco violento."
+    "Meu corpo foi lançado para frente."
+    "O livro caiu no chão—"
+    "Mas não fez barulho."
+
+    scene bg black with fade
+
+    "Quando abri os olhos…"
+
+    "O vagão estava vazio."
+
+    "Não havia passageiros."
+    "Não havia anúncios."
+    "Não havia reflexos."
+
+    "As janelas mostravam apenas um brilho frio."
+    "Azulado."
+    "Imóvel."
+
+    "Como se o mundo tivesse parado do outro lado do vidro."
+
     scene bg station_intervalla with fade
     play music "audio/ambient_mystery.mp3" loop
-    
-    "Eu saí do trem. Meus pés não faziam barulho no chão da plataforma."
-    "O letreiro da estação, em letras de neon que zumbiam baixo, dizia apenas uma palavra:"
+
+    "Eu desci do trem."
+
+    "Meus pés tocaram a plataforma—"
+    "E não houve som."
+
+    "Nem eco."
+    "Nem atrito."
+    "Nada."
+
+    "O ar não tinha cheiro."
+    "Nem temperatura."
+    "Ele apenas… existia."
+
+    "O letreiro da estação estava acima de mim."
+
     "{b}INTERVALLA{/b}"
-    
-    "Vi pessoas sentadas nos bancos. Elas pareciam feitas de fumaça. Seus olhos eram buracos vazios, olhando para um horizonte que não existia."
-    "E no final da plataforma, sentado sozinho..."
-    
+
+    "Eu senti um aperto no peito."
+    "Não medo."
+    "Reconhecimento."
+
+    "Vi pessoas sentadas nos bancos."
+    "Silhuetas humanas."
+    "Feitas de fumaça e lembrança."
+
+    "Algumas tinham rostos."
+    "Outras… não."
+
+    "Seus olhos eram buracos vazios."
+    "Fixos em um horizonte que não existia."
+    "Esperando algo que nunca chegava."
+
+    "E então eu o vi."
+
+    "No final da plataforma."
+    "Sentado sozinho."
+
     show cain blurred at center with dissolve:
         alpha 0.6
 
+    "Cain."
+
+    "Ele parecia… incompleto."
+    "Como se alguém tivesse abaixado a opacidade do mundo só para ele."
+
     a "Cain?"
-    
-    c "Você demorou, Haruto. Eu já estava começando a perder a cor das minhas próprias mãos."
-    
-    a "O que é este lugar? Eu morri também?"
-    
-    c "Não. Você é um visitante. Eu sou um residente... por enquanto."
-    c "Este é o Intervalla. O lugar onde as pessoas ficam quando o mundo começa a esquecê-las, mas elas ainda se recusam a soltar a vida."
-    c "Cada vez que alguém para de falar de mim, eu fico mais transparente. Cada vez que uma foto minha é guardada em uma gaveta, eu perco um pedaço da minha voz."
-    
-    a "Eu nunca vou te esquecer! Eu estou aqui, não estou?"
-    
-    c "Estar aqui não é o suficiente. Você precisa enfrentar o que nos trouxe até aqui. As memórias que você trancou porque doíam demais."
-    c "Se você quer me manter real, precisa aceitar a realidade de quem fomos. Sem filtros. Sem desculpas."
+
+    "A palavra saiu fraca."
+    "Como se o lugar não gostasse de nomes."
+
+    c "Você demorou, Haruto."
+    c "Eu já estava começando a perder a cor das minhas próprias mãos."
+
+    "Ele levantou as palmas."
+    "Elas tremulavam."
+    "Quase transparentes."
+
+    a "O que é este lugar?"
+    a "Eu morri também?"
+
+    "Cain sorriu."
+    "Mas não havia humor ali."
+
+    c "Não."
+    c "Você é um visitante."
+
+    c "Eu sou um residente…"
+    c "Por enquanto."
+
+    "Essa última parte ficou suspensa no ar."
+    "Como uma ameaça educada."
+
+    c "Este é o Intervalla."
+    c "O lugar onde as pessoas ficam quando o mundo começa a esquecê-las…"
+    c "…mas elas ainda se recusam a soltar a vida."
+
+    "Uma das figuras nos bancos virou lentamente a cabeça."
+    "Ela não tinha boca."
+    "Mas parecia ouvir."
+
+    c "Cada vez que alguém para de falar de mim…"
+    c "Eu fico mais transparente."
+
+    c "Cada vez que uma foto minha é guardada em uma gaveta…"
+    c "Eu perco um pedaço da minha voz."
+
+    "Eu senti algo se fechar dentro do meu peito."
+
+    a "Eu nunca vou te esquecer!"
+    a "Eu estou aqui, não estou?"
+
+    "Cain se levantou."
+    "Quando seus pés tocaram o chão—"
+    "O neon acima de nós piscou."
+
+    c "Estar aqui não é o suficiente."
+
+    "Ele deu um passo em minha direção."
+    "O mundo pareceu se distorcer levemente."
+
+    c "Você precisa enfrentar o que nos trouxe até aqui."
+    c "As memórias que você trancou porque doíam demais."
+
+    "Imagens passaram pela minha mente."
+    "Mensagens não respondidas."
+    "Silêncios ignorados."
+    "Coisas que eu decidi não perguntar."
+
+    c "Se você quer me manter real…"
+    c "Precisa aceitar a realidade de quem fomos."
+
+    c "Sem filtros."
+    c "Sem desculpas."
+
+    "O trem atrás de mim soltou um rangido baixo."
+    "Como se estivesse pronto para partir."
+    "Ou desaparecer."
 
     jump dungeons_memoria
 
@@ -206,87 +641,199 @@ label dungeons_memoria:
 
 label dungeon_palavras:
     scene bg memory_park with dissolve
-    "O cenário se reconstrói lentamente."
-    "O cheiro de grama cortada se mistura ao calor abafado de um verão antigo."
-    "Por um instante, eu esqueço onde estou. Esqueço o trem. Esqueço o Intervalla."
-    "Lá estamos nós, dois anos atrás."
 
-    "Eu estou sentado num banco, cercado de livros e anotações."
-    "Cain está ao meu lado, balançando o pé na terra, arrancando pequenos pedaços de grama sem perceber."
+    "O cenário se reconstrói como uma lembrança mal acordada."
+    "As cores surgem aos poucos, lavadas demais, como uma fotografia esquecida no sol."
+
+    "O cheiro de grama recém-cortada invade meus sentidos."
+    "Quente."
+    "Doce."
+    "Um verão que ainda não sabia que ia acabar."
+
+    "Por um instante, eu esqueço tudo."
+    "O trem."
+    "O Intervalla."
+    "O silêncio azul."
+
+    "Lá estamos nós."
+    "Anos atrás."
+
+    "Eu estou sentado em um banco de madeira."
+    "Cercado de livros abertos, anotações rabiscadas, planos empilhados."
+    "Meu futuro inteiro organizado em páginas numeradas."
+
+    "Cain está ao meu lado."
+    "Balançando o pé na terra."
+    "Arrancando pequenos pedaços de grama sem perceber."
+    "Como se estivesse tentando se certificar de que o mundo ainda era real."
 
     show cain young_sad at left
     show ari young_distracted at right
 
-    cy "Haruto… você já parou pra pensar que talvez a gente esteja correndo demais?"
+    cy "Haruto…"
+    cy "Você já parou pra pensar que talvez a gente esteja correndo rápido demais?"
+
+    "Eu lembro de ter suspirado."
+    "Não agora."
+    "Naquele dia."
+
     cy "Todo mundo fala de futuro como se ele fosse garantido."
+    cy "Como se fosse uma linha reta, sem falhas."
+
     cy "Mas e se não for?"
 
+    "O vento passa entre as árvores."
+    "As folhas fazem um som baixo."
+    "Quase um aviso."
+
     "Eu me lembro do incômodo que senti."
-    "Não pelas palavras dele — mas porque elas me tiravam do controle."
+    "Não pelas palavras dele."
+    "Mas porque elas bagunçavam algo que eu acreditava controlar."
 
     cy "Às vezes eu sinto que você já decidiu tudo."
-    cy "Que eu só tô aqui… acompanhando."
+    cy "Que já escolheu quem vai ser."
+    cy "Pra onde vai."
+    cy "O que vale a pena."
+
+    cy "E eu…"
+    cy "Eu só tô aqui acompanhando."
+
+    "Ele ri de leve."
+    "Mas o riso não alcança os olhos."
+
     cy "Como se a minha função fosse não atrapalhar."
 
     a "(Eu devia ter fechado o livro.)"
     a "(Devia ter olhado pra ele.)"
+    a "(Devia ter perguntado por quê.)"
+
     a "(Mas eu não fiz.)"
 
     menu:
         "Você está sendo dramático, Cain.":
+
+            "A lembrança aperta."
+            "A cena avança, obediente ao que eu escolhi naquela época."
+
             a "Eu lembro exatamente do tom da minha voz."
-            a "Impaciente. Superior."
-            a "Cain, você pensa demais. A vida não é um poema trágico."
-            a "Se você gastasse metade dessa energia estudando, não estaria tão perdido."
+            a "Impaciente."
+            a "Cansado."
+            a "Convencido demais pra perceber."
+
+            a "Cain, você pensa demais."
+            a "A vida não é um poema trágico."
+
+            a "Se você gastasse metade dessa energia estudando…"
+            a "Não estaria tão perdido."
+
+            "As palavras caem como pedras."
 
             cy "Perdido…"
+
+            "Ele repete a palavra devagar."
+            "Como se estivesse testando o peso dela."
+
             cy "Engraçado você dizer isso."
-            cy "Porque naquele momento, eu achei que você era o único que sabia exatamente pra onde estava indo."
+
+            cy "Porque naquele momento…"
+            cy "Eu achei que você era o único que sabia exatamente pra onde estava indo."
 
             "Cain abaixa a cabeça."
-            "A sombra dele se alonga no chão, como se estivesse sendo engolida."
+            "A sombra dele se alonga no chão."
+            "Estica demais."
+            "Como se estivesse tentando fugir do corpo."
 
             cy "Eu não queria respostas, Haruto."
+            cy "Eu não precisava de um plano."
+
             cy "Eu só queria que você me escutasse."
 
-            "A imagem dele perde saturação."
-            "O mundo fica mais silencioso."
+            "A saturação do mundo começa a cair."
+            "O verde vira cinza."
+            "O céu perde profundidade."
 
-            "A solidez não aumenta."
-            "Eu entendo agora: não foi crueldade."
+            "O som do parque desaparece."
+            "Fica apenas o silêncio que eu deixei naquele dia."
+
+            "Nada se fortalece."
+            "Nada se reconstrói."
+
+            "Agora eu entendo."
+            "Não foi crueldade."
+
             "Foi indiferença."
 
         "Eu sinto muito por não ter te visto.":
-            a "Eu fecho o livro. Devagar."
+
+            "A memória hesita."
+            "Como se não tivesse certeza de que pode mudar."
+
+            a "Eu fecho o livro."
+            "Devagar."
+            "Com cuidado demais."
+
             a "Como se esse gesto pudesse atravessar o tempo."
+            a "Como se pudesse alcançar você."
 
             a "Eu estava tão ocupado tentando ser alguém…"
             a "Que não percebi que estava deixando você sozinho bem do meu lado."
+
+            "Cain para de arrancar a grama."
+            "O pé deixa de balançar."
 
             a "Você não era figurante, Cain."
             a "Eu é que transformei você em pano de fundo."
 
             cy "Você sabe o que mais doeu?"
+
             cy "Não foi você discordar."
-            cy "Foi você nem perceber que eu estava pedindo ajuda."
+            cy "Nem me chamar de dramático."
+
+            cy "Foi você nem perceber…"
+            cy "Que eu estava pedindo ajuda."
+
+            "A palavra fica suspensa."
+            "Ajuda."
 
             a "Eu sinto muito."
             a "De verdade."
 
             "Cain respira fundo."
-            "Quando ele levanta o rosto, há dor — mas também alívio."
+            "O ar entra pesado."
+            "Sai tremido."
 
-            cy "Obrigado por finalmente olhar pra mim."
+            "Quando ele levanta o rosto…"
+            "Ainda há dor."
+
+            "Mas há algo novo."
+            "Alívio."
+
+            cy "Obrigado…"
+            cy "Por finalmente olhar pra mim."
 
             "Uma luz suave envolve o corpo dele."
-            "As cores voltam. O peso no ar diminui."
+            "Não é brilho."
+            "É presença."
+
+            "As cores do parque voltam lentamente."
+            "O vento fica mais quente."
+            "O mundo parece… um pouco mais sólido."
 
             $ solidez += 1
 
     $ dungeon_1_feita = True
+
     "O parque começa a se desfazer."
+    "Não em ruína."
+    "Em papel."
+
     "As árvores viram páginas em branco."
-    "O vento espalha palavras não ditas como pétalas."
+    "O céu se dobra como uma folha antiga."
+
+    "O vento espalha palavras não ditas."
+    "Elas giram no ar como pétalas."
+    "Como desculpas que chegaram tarde…"
+    "Mas chegaram."
 
     jump check_dungeons
 
@@ -555,6 +1102,10 @@ screen rolling_credits():
 
             text "Hachio" size 40 xalign 0.5
             text "@hachio81" size 30 xalign 0.5 color "#aaaaaa"
+
+            null height 10
+
+            text "Nano Banana" size 40 xalign 0.5
 
             null height 10
 
