@@ -35,6 +35,7 @@ image ari young_distracted = "images/cain/ari_young_distracted.png"
 image staff serious = "images/cain/staff_serious.png"
 image cain maozinhas = "images/cain/cain_maozinhas.png"
 image cain calm_smilee = "images/cain/calm_smilee.png"
+image cain calm_smie = "images/cain/calm_smie.png"
 
 # Variáveis de Estado
 default solidez = 0
@@ -579,13 +580,13 @@ label a_travessia_detalhada:
     a "Eu morri também?"
 
     hide cain blurred with dissolve
-    show cain calm_smile at center with dissolve:
+    show cain calm_smie at center with dissolve:
         alpha 0.6
 
     "Cain sorriu."
     "Mas não havia humor ali."
 
-    hide cain calm_smile with dissolve
+    hide cain calm_smie with dissolve
     show cain blurred at center with dissolve:
         alpha 0.6
     
@@ -656,9 +657,9 @@ label a_travessia_detalhada:
 
 label dungeons_memoria:
     scene bg station_intervalla with dissolve
-    show cain calm_smilee at center with dissolve:
+    show cain calm_smilee at right with dissolve:
         alpha 0.6
-        
+
     "O ar na estação é gelado. Cain aponta para três portais que se abriram na névoa."
     
     menu:
