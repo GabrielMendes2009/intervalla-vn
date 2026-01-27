@@ -186,13 +186,17 @@ label start:
     "Mas aquela foi a última vez que o vi respirar o mesmo ar que eu."
 
 label dia_seguinte:
-    scene bg school_rain with fade
+    show expression Movie(channel="movie_channel", play="images/bg/rain.webm", loop=True) at truecenter with fade
     play music "audio/sad_piano.mp3" loop
 
     "A chuva caía fina."
     "Daquelas que não chegam a lavar a rua."
     "Só deixam tudo frio."
     "Inacabado."
+
+    hide expression Movie(channel="movie_channel") with fade
+
+    scene bg school_rain with dissolve
 
     "A escola parecia um funeral antes mesmo do anúncio."
     "Passos ecoavam demais."
@@ -211,6 +215,7 @@ label dia_seguinte:
     "Que fizesse algum comentário inútil só para quebrar o clima."
 
     "A porta da sala se abriu."
+    play music "audio/door_creak.mp3"
     "O rangido ecoou."
     "Alto demais."
     "Como um grito em um quarto vazio."
@@ -233,6 +238,8 @@ label dia_seguinte:
     f "O aluno Cain..."
     f "Ele faleceu ontem à noite."
     f "Em sua casa."
+
+    hide staff serious with dissolve
 
     "O mundo não parou."
     "Ele não explodiu."
@@ -278,10 +285,14 @@ label dia_seguinte:
             a "(Isso não está acontecendo.)"
             a "(Isso não pode estar acontecendo.)"
 
-    "A professora continuava falando."
+    show staff serious at center with dissolve
+
+    "A funcionária continuava falando."
     "Palavras sobre luto."
     "Apoio psicológico."
     "Minuto de silêncio."
+
+    hide staff serious with dissolve
 
     "Eu não ouvi nada."
 
@@ -304,17 +315,21 @@ label dia_seguinte:
     jump rupturas_expandidas
 
 label rupturas_expandidas:
-    scene bg school_corridor with fade
+    show expression Movie(channel="movie_channel1", play="images/bg/rainn2.webm", loop=True) at truecenter with fade
 
     "Os dias que se seguiram foram um borrão de cinza."
     "Não havia manhã."
     "Não havia noite."
     "Só intervalos."
 
+    hide expression Movie(channel="movie_channel1") with fade
+
     "Eu via o rosto dele em cada sombra."
     "Não como um fantasma."
     "Como um erro."
     "Algo que o mundo esqueceu de apagar."
+
+    scene bg school_corridor with fade
 
     "Na biblioteca, eu jurava ouvir a risada dele entre as estantes de história."
     "Baixa."
