@@ -12,7 +12,7 @@ image bg train_interior = "images/bg/train_interior.jpg"
 image bg black = "images/bg/black.jpg"
 image bg school_rain = "images/bg/school_rain.jpg"
 image bg classroom = "images/bg/classroom.png"
-image bg school_corridor = "images/bg/school_corridor.jpg"
+image bg school_corridor = "images/bg/school_corridor.png"
 image bg dream = "images/bg/dream.png"
 image bg train_night = "images/bg/train_night.jpg"
 image bg station_intervalla = "images/bg/station_intervalla.jpg"
@@ -44,7 +44,7 @@ default conversou_trem = False
 label start:
 
     stop music fadeout 2.0
-    
+
     scene bg train_interior with fade
     play music "audio/train_ambience.mp3" loop
     
@@ -585,6 +585,10 @@ screen rolling_credits():
             text "freesound_community" size 40 xalign 0.5
             text "pixabay.com/users/freesound_community-46691455" size 30 xalign 0.5 color "#aaaaaa"
         
+            null height 10
+
+            text "Kenji Kawai" size 40 xalign 0.5
+            
             null height 10
 
             text "Lorien Testard" size 40 xalign 0.5
