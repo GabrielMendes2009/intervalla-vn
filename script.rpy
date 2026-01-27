@@ -42,6 +42,9 @@ default conversou_trem = False
 
 # Início do Jogo
 label start:
+
+    stop music fadeout 2.0
+    
     scene bg train_interior with fade
     play music "audio/train_ambience.mp3" loop
     
@@ -508,12 +511,13 @@ screen rolling_credits():
 
         vbox:
             xalign 0.5
-            spacing 5
+            spacing 8
+        
             text "Gabriel Mendes" size 40 xalign 0.5
             text "github.com/GabrielMendes2009" size 30 xalign 0.5 color "#aaaaaa"
-        vbox:
-            xalign 0.5
-            spacing 5
+        
+            null height 10
+
             text "Manuel Miranda" size 40 xalign 0.5
             text "github.com/manuelm11-bit" size 30 xalign 0.5 color "#aaaaaa"
 
@@ -522,64 +526,67 @@ screen rolling_credits():
         text "Arte" size 50 xalign 0.5
         vbox:
             xalign 0.5
-            spacing 5
+            spacing 8
+
             text "Milkology8" size 40 xalign 0.5
             text "@g.ngyu" size 30 xalign 0.5 color "#aaaaaa"
-        vbox:
-            xalign 0.5
-            spacing 5
+
+            null height 10
+
             text "Brett Carlsen" size 40 xalign 0.5
             text "bcarlsen.artstation.com" size 30 xalign 0.5 color "#aaaaaa"
-        vbox:
-            xalign 0.5
-            spacing 5
+
+            null height 10
+
             text "Craiyon" size 40 xalign 0.5
             text "www.craiyon.com" size 30 xalign 0.5 color "#aaaaaa"
-        vbox:
-            xalign 0.5
-            spacing 5
+
+            null height 10
+
             text "Makoto Shinkai" size 40 xalign 0.5
             text "@makoto.shinkai" size 30 xalign 0.5 color "#aaaaaa"
-        vbox:
-            xalign 0.5
-            spacing 5
+
+            null height 10
+            
             text "Foxeleos" size 40 xalign 0.5
             text "deviantart.com/foxeleos" size 30 xalign 0.5 color "#aaaaaa"
-        vbox:
-            xalign 0.5
-            spacing 5
+        
+            null height 10
+
             text "Hachio" size 40 xalign 0.5
             text "@hachio81" size 30 xalign 0.5 color "#aaaaaa"
-        
-        text "Pixabay" size 40 xalign 0.5
+
+            null height 10
+
+            text "Pixabay" size 40 xalign 0.5
 
         null height 100
 
         text "Música & Áudio" size 50 xalign 0.5
         vbox:
             xalign 0.5
-            spacing 5
+            spacing 8
+        
             text "DELOSound" size 40 xalign 0.5
             text "pixabay.com/users/delosound-46524562" size 30 xalign 0.5 color "#aaaaaa"
-        vbox:
-            xalign 0.5
-            spacing 5
+        
+            null height 10
+
             text "Cracious" size 40 xalign 0.5
             text "pixabay.com/users/cracious-49787968" size 30 xalign 0.5 color "#aaaaaa"
-        vbox:
-            xalign 0.5
-            spacing 5
+        
+            null height 10
+
             text "Universfield" size 40 xalign 0.5
             text "pixabay.com/users/universfield-28281460" size 30 xalign 0.5 color "#aaaaaa"
 
-        vbox:
-            xalign 0.5
-            spacing 5
+            null height 10
+
             text "freesound_community" size 40 xalign 0.5
             text "pixabay.com/users/freesound_community-46691455" size 30 xalign 0.5 color "#aaaaaa"
-        vbox:
-            xalign 0.5
-            spacing 5
+        
+            null height 10
+
             text "Lorien Testard" size 40 xalign 0.5
             text "@lorien_testard" size 30 xalign 0.5 color "#aaaaaa"
 
@@ -588,14 +595,18 @@ screen rolling_credits():
         text "Programação" size 50 xalign 0.5
         vbox:
             xalign 0.5
-            spacing 5
+            spacing 8
             text "Gabriel Mendes" size 40 xalign 0.5
             text "github.com/GabrielMendes2009" size 30 xalign 0.5 color "#aaaaaa"
 
         null height 100
 
         text "Engine" size 50 xalign 0.5
-        text "Ren'Py" size 40 xalign 0.5
+        vbox:
+            xalign 0.5
+            spacing 8
+            text "Ren'Py" size 40 xalign 0.5
+            text "renpy.org" size 30 xalign 0.5 color "#aaaaaa"
 
         null height 140
 
@@ -617,5 +628,5 @@ screen rolling_credits():
 
         null height 600
 
-    timer 130 action Stop("audio/credits_theme.mp3", fadeout=10.0)
+    timer 130 action Stop("music", fadeout=7.0)
     timer 160 action Quit(confirm=False)

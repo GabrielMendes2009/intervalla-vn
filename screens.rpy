@@ -355,6 +355,8 @@ screen main_menu():
     ## Isso garante que qualquer outra tela de menu seja substituída.
     tag menu
 
+    on "show" action Play("music", "audio/main-menu-theme.mp3", fadein=3.0)
+
     add gui.main_menu_background
 
     ## Esse quadro vazio escurece o menu principal.
