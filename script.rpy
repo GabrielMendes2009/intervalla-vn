@@ -20,6 +20,7 @@ image bg white_room = "images/bg/dream.png"
 image bg memory_park = "images/bg/memory_park.png"
 image bg memory_hospital = "images/bg/memory_hospital.png"
 image bg memory_future = "images/bg/memory_future.png"
+image bg library = "images/bg/library.png"
 
 # Imagens de Personagens
 image cain calm_smile = "images/cain/calm_smile.png"
@@ -32,6 +33,8 @@ image cain weak = "images/cain/cain_weak.png"
 image cain solid = "images/cain/cain_solid.png"
 image ari young_distracted = "images/cain/ari_young_distracted.png"
 image staff serious = "images/cain/staff_serious.png"
+image cain maozinhas = "images/cain/cain_maozinhas.png"
+image cain calm_smilee = "images/cain/calm_smilee.png"
 
 # Variáveis de Estado
 default solidez = 0
@@ -322,16 +325,16 @@ label rupturas_expandidas:
     "Não havia noite."
     "Só intervalos."
 
-    hide expression Movie(channel="movie_channel1") with fade
-
     "Eu via o rosto dele em cada sombra."
     "Não como um fantasma."
     "Como um erro."
     "Algo que o mundo esqueceu de apagar."
 
-    scene bg school_corridor with fade
+    hide expression Movie(channel="movie_channel1")
+    scene bg library with dissolve
 
     "Na biblioteca, eu jurava ouvir a risada dele entre as estantes de história."
+    play music "audio/laugh.mp3"
     "Baixa."
     "Cúmplice."
     "A mesma risada que surgia quando eu errava uma tradução óbvia."
@@ -343,22 +346,6 @@ label rupturas_expandidas:
 
     "Mas o som ficou."
     "Por tempo demais."
-
-    "No reflexo da janela do ônibus—"
-    "Por um milésimo de segundo—"
-    "Ele estava lá."
-
-    "Sentado no banco de trás."
-    "O cotovelo apoiado."
-    "O olhar perdido na rua, como se o mundo ainda estivesse acontecendo para ele."
-
-    "Meu coração disparou."
-
-    "Eu pisquei."
-
-    "O assento estava vazio."
-
-    "O reflexo… também."
 
     "Eu engoli em seco."
 
@@ -388,7 +375,7 @@ label rupturas_expandidas:
         alpha 0.8
 
     "Ele parecia incompleto."
-    "Levemente desfocado nas bordas."
+    "Levemente desfocado."
     "Como se não tivesse sido totalmente renderizado."
 
     c "Não demora, Haruto."
@@ -498,8 +485,10 @@ label a_travessia_detalhada:
     "O silêncio foi tão absoluto que meus ouvidos doeram."
     "Vácuo puro."
 
+    play music "audio/train_brake_screech.mp3"
     "O trem parou com um solavanco violento."
     "Meu corpo foi lançado para frente."
+    play music "audio/impact.mp3"
     "O livro caiu no chão—"
     "Mas não fez barulho."
 
@@ -575,16 +564,31 @@ label a_travessia_detalhada:
     c "Você demorou, Haruto."
     c "Eu já estava começando a perder a cor das minhas próprias mãos."
 
+    show cain maozinhas at center with dissolve:
+        alpha 0.6
+
     "Ele levantou as palmas."
     "Elas tremulavam."
     "Quase transparentes."
 
+    hide cain maozinhas with dissolve
+    show cain blurred at center with dissolve:
+        alpha 0.6
+
     a "O que é este lugar?"
     a "Eu morri também?"
+
+    hide cain blurred with dissolve
+    show cain calm_smile at center with dissolve:
+        alpha 0.6
 
     "Cain sorriu."
     "Mas não havia humor ali."
 
+    hide cain calm_smile with dissolve
+    show cain blurred at center with dissolve:
+        alpha 0.6
+    
     c "Não."
     c "Você é um visitante."
 
@@ -594,13 +598,22 @@ label a_travessia_detalhada:
     "Essa última parte ficou suspensa no ar."
     "Como uma ameaça educada."
 
+    hide cain blurred with dissolve
+    show cain calm_smilee at center with dissolve:
+        alpha 0.6
+
     c "Este é o Intervalla."
     c "O lugar onde as pessoas ficam quando o mundo começa a esquecê-las…"
     c "…mas elas ainda se recusam a soltar a vida."
 
+    hide cain calm_smilee with dissolve
+
     "Uma das figuras nos bancos virou lentamente a cabeça."
     "Ela não tinha boca."
     "Mas parecia ouvir."
+
+    show cain blurred at center with dissolve:
+        alpha 0.6
 
     c "Cada vez que alguém para de falar de mim…"
     c "Eu fico mais transparente."
@@ -614,8 +627,7 @@ label a_travessia_detalhada:
     a "Eu estou aqui, não estou?"
 
     "Cain se levantou."
-    "Quando seus pés tocaram o chão—"
-    "O neon acima de nós piscou."
+    "Quando seus pés tocaram o chão"
 
     c "Estar aqui não é o suficiente."
 
@@ -644,6 +656,9 @@ label a_travessia_detalhada:
 
 label dungeons_memoria:
     scene bg station_intervalla with dissolve
+    show cain calm_smilee at center with dissolve:
+        alpha 0.6
+        
     "O ar na estação é gelado. Cain aponta para três portais que se abriram na névoa."
     
     menu:
@@ -1117,6 +1132,11 @@ screen rolling_credits():
 
             text "Hachio" size 40 xalign 0.5
             text "@hachio81" size 30 xalign 0.5 color "#aaaaaa"
+
+            null height 10
+
+            text "goliatgashi" size 40 xalign 0.5
+            text "deviantart.com/goliatgashi/" size 30 xalign 0.5 color "#aaaaaa"
 
             null height 10
 
