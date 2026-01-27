@@ -487,7 +487,7 @@ label final_ruim:
 transform credits_scroll:
     xalign 0.5
     ypos 1200
-    linear 115 ypos -2800
+    linear 150 ypos -4200
 
 screen rolling_credits():
 
@@ -505,31 +505,92 @@ screen rolling_credits():
         null height 120
 
         text "Roteiro & Direção" size 50 xalign 0.5
-        text "Gabriel Mendes" size 40 xalign 0.5
-        text "github.com/GabrielMendes2009" size 30 xalign 0.5
-        text "Manuel Miranda" size 40 xalign 0.5
-        text "github.com/manuelm11-bit" size 30 xalign 0.5
+
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Gabriel Mendes" size 40 xalign 0.5
+            text "github.com/GabrielMendes2009" size 30 xalign 0.5 color "#aaaaaa"
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Manuel Miranda" size 40 xalign 0.5
+            text "github.com/manuelm11-bit" size 30 xalign 0.5 color "#aaaaaa"
 
         null height 100
 
         text "Arte" size 50 xalign 0.5
-        text "Milkology8" size 40 xalign 0.5
-        text "@g.ngyu" size 30 xalign 0.5
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Milkology8" size 40 xalign 0.5
+            text "@g.ngyu" size 30 xalign 0.5 color "#aaaaaa"
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Brett Carlsen" size 40 xalign 0.5
+            text "bcarlsen.artstation.com" size 30 xalign 0.5 color "#aaaaaa"
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Craiyon" size 40 xalign 0.5
+            text "www.craiyon.com" size 30 xalign 0.5 color "#aaaaaa"
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Makoto Shinkai" size 40 xalign 0.5
+            text "@makoto.shinkai" size 30 xalign 0.5 color "#aaaaaa"
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Foxeleos" size 40 xalign 0.5
+            text "deviantart.com/foxeleos" size 30 xalign 0.5 color "#aaaaaa"
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Hachio" size 40 xalign 0.5
+            text "@hachio81" size 30 xalign 0.5 color "#aaaaaa"
+        
+        text "Pixabay" size 40 xalign 0.5
 
         null height 100
 
         text "Música & Áudio" size 50 xalign 0.5
-        text "DELOSound" size 40 xalign 0.5
-        text "Cracious" size 40 xalign 0.5
-        text "Universfield" size 40 xalign 0.5
-        text "freesound_community" size 40 xalign 0.5
-        text "Lorien Testard" size 40 xalign 0.5
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "DELOSound" size 40 xalign 0.5
+            text "pixabay.com/users/delosound-46524562" size 30 xalign 0.5 color "#aaaaaa"
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Cracious" size 40 xalign 0.5
+            text "pixabay.com/users/cracious-49787968" size 30 xalign 0.5 color "#aaaaaa"
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Universfield" size 40 xalign 0.5
+            text "pixabay.com/users/universfield-28281460" size 30 xalign 0.5 color "#aaaaaa"
+
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "freesound_community" size 40 xalign 0.5
+            text "pixabay.com/users/freesound_community-46691455" size 30 xalign 0.5 color "#aaaaaa"
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Lorien Testard" size 40 xalign 0.5
+            text "@lorien_testard" size 30 xalign 0.5 color "#aaaaaa"
 
         null height 100
 
         text "Programação" size 50 xalign 0.5
-        text "Gabriel Mendes" size 40 xalign 0.5
-        text "github.com/GabrielMendes2009" size 30 xalign 0.5
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Gabriel Mendes" size 40 xalign 0.5
+            text "github.com/GabrielMendes2009" size 30 xalign 0.5 color "#aaaaaa"
 
         null height 100
 
@@ -542,8 +603,11 @@ screen rolling_credits():
 
         null height 80
 
-        text "Enquanto alguém se lembra…" size 36 xalign 0.5
-        text "ninguém desaparece de verdade." size 36 xalign 0.5
+        vbox:
+            xalign 0.5
+            spacing 5
+            text "Enquanto alguém se lembra…" size 36 xalign 0.5 color "#aaaaaa"
+            text "ninguém desaparece de verdade." size 36 xalign 0.5 color "#aaaaaa"
 
         null height 200
 
@@ -553,4 +617,5 @@ screen rolling_credits():
 
         null height 600
 
-    timer 120 action Quit(confirm=False)
+    timer 130 action Stop("audio/credits_theme.mp3", fadeout=10.0)
+    timer 160 action Quit(confirm=False)
