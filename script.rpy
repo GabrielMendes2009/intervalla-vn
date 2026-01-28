@@ -1,4 +1,10 @@
-﻿# Definições de Personagens
+﻿# CONFIGURAÇÃO GLOBAL DO TEXTO DIGITADO
+init python:
+    preferences.text_cps = 30
+    
+    config.default_text_cps = 30
+
+# Definições de Personagens
 define a = Character("Haruto", color="#3498db")
 define c = Character("Cain", color="#e74c3c")
 define f = Character("Funcionária", color="#95a5a6")
@@ -49,6 +55,12 @@ default dungeon_1_feita = False
 default dungeon_2_feita = False
 default dungeon_3_feita = False
 default conversou_trem = False
+default haruto_magoado = False
+default haruto_observador = False
+default culpa_haruto = False
+default negacao_haruto = False
+default travessia_aceita = False
+default travessia_hesitacao = False
 
 # Início do Jogo
 label start:
@@ -225,7 +237,7 @@ label dia_seguinte:
     "Que fizesse algum comentário inútil só para quebrar o clima."
 
     "A porta da sala se abriu."
-    play music "audio/door_creak.mp3"
+    play sound "audio/door_creak.mp3"
     "O rangido ecoou."
     "Alto demais."
     "Como um grito em um quarto vazio."
@@ -248,6 +260,8 @@ label dia_seguinte:
     f "O aluno Cain..."
     f "Ele faleceu ontem à noite."
     f "Em sua casa."
+
+    stop music fadeout 1.0
 
     hide staff serious with dissolve
 
@@ -320,11 +334,11 @@ label dia_seguinte:
     "É arrependimento."
 
     scene bg black with fade
-    stop music fadeout 2.0
 
     jump rupturas_expandidas
 
 label rupturas_expandidas:
+    play music "audio/ambient_rain.mp3" loop
     show expression Movie(channel="movie_channel1", play="images/bg/rainn2.webm", loop=True) at truecenter with fade
 
     "Os dias que se seguiram foram um borrão de cinza."
@@ -340,8 +354,11 @@ label rupturas_expandidas:
     hide expression Movie(channel="movie_channel1")
     scene bg library with dissolve
 
+    stop music fadeout 1.0
+    play music "audio/library.mp3" loop
+
     "Na biblioteca, eu jurava ouvir a risada dele entre as estantes de história."
-    play music "audio/laugh.mp3"
+
     "Baixa."
     "Cúmplice."
     "A mesma risada que surgia quando eu errava uma tradução óbvia."
@@ -444,7 +461,8 @@ label rupturas_expandidas:
 
 label a_travessia_detalhada:
     scene bg train_night with fade
-    play music "audio/train_ambience.mp3" loop
+    stop music fadeout 2.0
+    play music "audio/train_ambience.mp3" fadein 2.0 loop
 
     "Uma semana depois."
     "O mesmo trem."
@@ -487,15 +505,14 @@ label a_travessia_detalhada:
     "Primeiro em estática."
     "Depois em nada."
 
-    stop music
+    stop music fadeout 1.0
 
     "O silêncio foi tão absoluto que meus ouvidos doeram."
     "Vácuo puro."
 
-    play music "audio/train_brake_screech.mp3"
+    play sound "audio/train_brake_screech.mp3"
     "O trem parou com um solavanco violento."
     "Meu corpo foi lançado para frente."
-    play music "audio/impact.mp3"
     "O livro caiu no chão—"
     "Mas não fez barulho."
 
@@ -662,6 +679,7 @@ label a_travessia_detalhada:
     jump dungeons_memoria
 
 label dungeons_memoria:
+    play music "audio/final_theme.mp3" loop
     scene bg station_intervalla with dissolve
     show cain calm_smilee at right with dissolve:
         alpha 0.6
@@ -677,6 +695,9 @@ label dungeons_memoria:
             jump dungeon_saudade
 
 label dungeon_palavras:
+    stop music fadeout 1.0
+    play music "audio/park_ambience.mp3" loop
+    
     scene bg memory_park with dissolve
 
     "O cenário se reconstrói como uma lembrança mal acordada."
@@ -704,8 +725,8 @@ label dungeon_palavras:
     "Arrancando pequenos pedaços de grama sem perceber."
     "Como se estivesse tentando se certificar de que o mundo ainda era real."
 
-    show cain young_sad at left
-    show ari young_distracted at right
+    show cain young_sad at left with dissolve
+    show ari young_distracted at right with dissolve
 
     cy "Haruto…"
     cy "Você já parou pra pensar que talvez a gente esteja correndo rápido demais?"
@@ -872,9 +893,12 @@ label dungeon_palavras:
     "Como desculpas que chegaram tarde…"
     "Mas chegaram."
 
+    stop music fadeout 1.0
     jump check_dungeons
 
 label dungeon_medo:
+    stop music fadeout 1.0
+    play music "audio/hospital_ambience.mp3" loop
 
     scene bg hospital with dissolve
 
@@ -1091,9 +1115,13 @@ label dungeon_medo:
     "Resta apenas o eco."
     "E a pergunta que não tem resposta fácil."
 
+    stop music fadeout 2.0
     jump check_dungeons
 
 label dungeon_saudade:
+    stop music fadeout 2.0
+    play music "audio/roma.mp3" fadein 2.0 loop
+    
     scene bg memory_future with dissolve
 
     "O sol é quente demais."
@@ -1169,6 +1197,10 @@ label dungeon_saudade:
             "Como uma tela sendo rasgada."
 
         "Isso não é Roma. É um necrotério pintado de dourado.":
+
+            stop music fadeout 1.0
+            play music "audio/final_theme.mp3" fadein 2.0 loop
+
             a "Minha voz falha."
             a "Mas não abaixa."
 
@@ -1216,6 +1248,7 @@ label dungeon_saudade:
     "Cruel."
     "Real."
 
+    stop music fadeout 2.0
     jump check_dungeons
 
 label check_dungeons:
@@ -1240,6 +1273,7 @@ label coracao_intervalo:
         jump final_ruim
 
 label final_bom:
+
     scene bg intervalla_white with fade
 
     show cain solid at center with dissolve:
@@ -1288,7 +1322,9 @@ label final_bom:
     c "Agora vai."
     c "O trem ainda está te esperando."
 
-    c "Existe uma vida inteira que só pode acontecer sem mim."
+    c "Existe uma vida inteira…"
+    c "Que só pode acontecer sem mim."
+
     c "E isso…"
     c "Também é amor."
 
@@ -1303,48 +1339,59 @@ label final_bom:
     "Eu seguro o marcador entre os dedos."
     "{i}Memoria te servat.{/i}"
 
-    play music "audio/credits_theme.mp3" fadein 2.0
+    stop music fadeout 2.0
+    play music "audio/credits_theme.mp3" fadein 2.0 loop
     call screen rolling_credits
 
     return
 
 label final_ruim:
     scene bg intervalla_empty with fade
+    stop music fadeout 2.0
+    play music "audio/ambient_mystery.mp3" fadein 2.0 loop
 
-    "O mundo engasga."
-    "O tempo não avança."
-    "Ele apenas… para."
+    "A estação não treme."
+    "Ela não reage."
+    "Ela aceita."
 
     show cain faded at center with dissolve:
+        xpos 0.5
+        ypos 0.6
+        anchor (0.5, 0.5)
         alpha 0.4
 
-    c "Haruto…"
-    c "Você escolheu ficar olhando para mim."
-    c "E esqueceu de olhar para frente."
+    c "Então…"
+    c "Você ficou."
 
-    a "…"
+    a "Eu não consegui."
+    a "Eu tentei."
+    a "Mas não consegui soltar."
+
+    c "Eu sei."
 
     "Sentamos no banco."
-    "Não como antes."
-    "Sem livros."
-    "Sem futuro."
+    "Lado a lado."
+    "Como antes."
 
-    c "Daqui a pouco, ninguém mais vai dizer meu nome."
-    c "Depois disso, eu fico leve."
-    c "Tão leve que nem eu vou lembrar quem eu fui."
+    c "Aqui, ninguém esquece."
+    c "Mas ninguém segue."
+
+    c "Eu vou ficando mais leve."
+    c "Mais quieto."
+    c "Até não sobrar o suficiente pra doer."
 
     c "E você…"
-    c "Você vai ficar comigo até isso acontecer."
-
-    "O silêncio cresce."
-    "Não dói."
-    "Isso é o pior."
+    c "Vai me chamar de memória."
+    c "Quando isso sempre foi medo."
 
     "O letreiro acima da estação pisca."
+
     "{b}INTERVALLA{/b}"
 
-    "Desta vez, não há trem."
+    "Nenhum trem chega."
+    "Nenhum trem parte."
 
+    stop music fadeout 4.0
     play music "audio/credits_theme.mp3" fadein 2.0
     call screen rolling_credits
 
@@ -1465,6 +1512,21 @@ screen rolling_credits():
 
             text "Lorien Testard" size 40 xalign 0.5
             text "@lorien_testard" size 30 xalign 0.5 color "#aaaaaa"
+
+            null height 10
+
+            text "Saint Juvi" size 40 xalign 0.5
+            text "@oijuvi" size 30 xalign 0.5 color "#aaaaaa"
+
+            null height 10
+
+            text "Atlus Sound Team" size 40 xalign 0.5
+            text "atlus.com" size 30 xalign 0.5 color "#aaaaaa"
+
+            null height 10
+
+            text "Yeskay Studio" size 40 xalign 0.5
+            text "@yeskaystudio" size 30 xalign 0.5 color "#aaaaaa"
 
         null height 100
 
