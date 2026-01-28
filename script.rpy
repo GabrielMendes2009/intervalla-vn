@@ -21,6 +21,11 @@ image bg memory_park = "images/bg/memory_park.png"
 image bg memory_hospital = "images/bg/memory_hospital.png"
 image bg memory_future = "images/bg/memory_future.png"
 image bg library = "images/bg/library.png"
+image bg hospital_blink = "images/bg/cain_hospital_blink.png"
+image bg hospital_olhar = "images/bg/cain_hospital_olhar.png"
+image bg hospital = "images/bg/cain_hospital.png"
+image bg intervalla_white = "images/bg/intervalla_white.png"
+image bg intervalla_empty = "images/bg/intervalla_empty.png"
 
 # Imagens de Personagens
 image cain calm_smile = "images/cain/calm_smile.png"
@@ -36,6 +41,7 @@ image staff serious = "images/cain/staff_serious.png"
 image cain maozinhas = "images/cain/cain_maozinhas.png"
 image cain calm_smilee = "images/cain/calm_smilee.png"
 image cain calm_smie = "images/cain/calm_smie.png"
+image cain faded = "images/cain/cain_faded.png"
 
 # Variáveis de Estado
 default solidez = 0
@@ -372,7 +378,7 @@ label rupturas_expandidas:
     "Não como uma lembrança."
     "Mas como presença."
 
-    show cain hand_out at center:
+    show cain hand_out at center with dissolve:
         alpha 0.8
 
     "Ele parecia incompleto."
@@ -870,7 +876,7 @@ label dungeon_palavras:
 
 label dungeon_medo:
 
-    scene bg memory_hospital with dissolve
+    scene bg hospital with dissolve
 
     "O cheiro vem antes da imagem."
     "Álcool."
@@ -888,8 +894,6 @@ label dungeon_medo:
 
     "Cada apito é uma contagem regressiva que ninguém tem coragem de anunciar."
 
-    show cain weak at center
-
     "Cain está deitado."
     "Frágil."
     "Menor."
@@ -897,6 +901,8 @@ label dungeon_medo:
     "Os ombros que costumavam ocupar espaço agora mal levantam o lençol."
     "Os olhos ainda são os mesmos."
     "Cansados — mas atentos."
+
+    scene bg hospital_olhar with dissolve
 
     cw "Você demorou."
 
@@ -916,7 +922,11 @@ label dungeon_medo:
 
     cw "Tentou sorrir."
 
+    scene bg hospital_blink with dissolve
+
     "Ele fecha os olhos por um segundo."
+
+    scene bg hospital with dissolve
 
     cw "Foi pior do que se ela tivesse chorado."
 
@@ -932,6 +942,8 @@ label dungeon_medo:
     cw "A funcionar."
 
     cw "Mesmo quando algo fica faltando."
+
+    scene bg hospital_olhar with dissolve
 
     "Ele vira o rosto levemente em minha direção."
 
@@ -966,8 +978,12 @@ label dungeon_medo:
             a "Eu vou garantir que ninguém esqueça isso."
             a "Eu prometo."
 
+            scene bg hospital_blink with dissolve
+
             "Cain não sorri."
             "Ele suspira."
+
+            scene bg hospital with dissolve
 
             cw "Isso soa… confortável."
 
@@ -985,6 +1001,8 @@ label dungeon_medo:
             cw "Eu não fui forte."
             cw "Eu não fui constante."
             cw "Eu não fui fácil de amar."
+
+            scene bg hospital_olhar with dissolve
 
             cw "Se você me transformar em um santo…"
             cw "Você não vai estar me lembrando."
@@ -1005,9 +1023,9 @@ label dungeon_medo:
             "Minha voz não sai de imediato."
             "Ela precisa atravessar o medo primeiro."
 
-            a "Minha garganta aperta."
-            a "Não de tristeza."
-            a "De raiva acumulada."
+            "Minha garganta aperta."
+            "Não de tristeza."
+            "De raiva acumulada."
 
             a "Você não confiou em mim!"
             a "Você decidiu sozinho!"
@@ -1020,16 +1038,24 @@ label dungeon_medo:
             "Feias."
             "Humanas."
 
+            scene bg hospital_blink with dissolve
+
             "Cain fecha os olhos."
             "Não para fugir."
             "Para aguentar."
+
+            scene bg hospital with dissolve
 
             cw "Isso…"
 
             cw "Isso é real."
 
+            scene bg hospital_blink with dissolve
+
             "Ele respira fundo."
             "Com dificuldade."
+
+            scene bg hospital_olhar with dissolve
 
             cw "Eu fui egoísta."
             cw "Eu tive medo de ser fraco aos seus olhos."
@@ -1078,9 +1104,9 @@ label dungeon_saudade:
     "Azul sem vento."
     "Azul sem promessa."
 
-    show cain adult_happy:
+    show cain adult_happy at center with dissolve:
         xpos 0.5
-        ypos 0.5
+        ypos 0.6
         anchor (0.5, 0.5)
         alpha 0.9
 
@@ -1165,7 +1191,7 @@ label dungeon_saudade:
 
             show cain adult_happy:
                 xpos 0.5
-                ypos 0.5
+                ypos 0.6
                 anchor (0.5, 0.5)
                 alpha 1.0
 
@@ -1216,9 +1242,9 @@ label coracao_intervalo:
 label final_bom:
     scene bg intervalla_white with fade
 
-    show cain solid with dissolve:
+    show cain solid at center with dissolve:
         xpos 0.5
-        ypos 0.5
+        ypos 0.6
         anchor (0.5, 0.5)
         alpha 1.0
 
