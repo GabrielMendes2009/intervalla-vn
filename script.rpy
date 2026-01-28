@@ -242,7 +242,7 @@ label dia_seguinte:
     "Alto demais."
     "Como um grito em um quarto vazio."
 
-    show staff serious at center
+    show staff serious at center with dissolve
 
     f "Alunos..."
     f "Por favor, prestem atenção."
