@@ -43,7 +43,7 @@ image cain adult_happy = "images/cain/cain_adult_happy.png"
 image cain weak = "images/cain/cain_weak.png"
 image cain solid = "images/cain/cain_solid.png"
 image ari young_distracted = "images/cain/ari_young_distracted.png"
-image staff serious = "images/cain/staff_serious.png"
+image staff serious = "images/cain/staff_seriouss.png"
 image cain maozinhas = "images/cain/cain_maozinhas.png"
 image cain calm_smilee = "images/cain/calm_smilee.png"
 image cain calm_smie = "images/cain/calm_smie.png"
@@ -209,7 +209,7 @@ label start:
 
 label dia_seguinte:
     show expression Movie(channel="movie_channel", play="images/bg/rain.webm", loop=True) at truecenter with fade
-    play music "audio/sad_piano.mp3" loop
+    play music "audio/sad_piano3.mp3" loop
 
     "A chuva caía fina."
     "Daquelas que não chegam a lavar a rua."
@@ -1392,15 +1392,15 @@ label final_ruim:
     "Nenhum trem parte."
 
     stop music fadeout 4.0
-    play music "audio/credits_theme.mp3" fadein 2.0
+    play music "audio/credits_theme.mp3" loop fadein 2.0
     call screen rolling_credits
 
     return
 
 transform credits_scroll:
     xalign 0.5
-    ypos 1200
-    linear 150 ypos -4200
+    ypos 1100
+    linear 260 ypos -5200
 
 screen rolling_credits():
 
@@ -1539,6 +1539,29 @@ screen rolling_credits():
 
         null height 100
 
+        text "Testers" size 50 xalign 0.5
+        vbox:
+            xalign 0.5
+            spacing 8
+        
+            text "Manuel Miranda" size 40 xalign 0.5
+            text "github.com/manuelm11-bit" size 30 xalign 0.5 color "#aaaaaa"
+        
+            null height 10
+
+            text "Cou" size 40 xalign 0.5
+        
+            null height 10
+
+            text "AshleySama" size 40 xalign 0.5
+            text "@AshAshSama" size 30 xalign 0.5 color "#aaaaaa"
+
+            null height 10
+
+            text "Parasita" size 40 xalign 0.5
+
+        null height 100
+
         text "Engine" size 50 xalign 0.5
         vbox:
             xalign 0.5
@@ -1566,5 +1589,5 @@ screen rolling_credits():
 
         null height 600
 
-    timer 130 action Stop("music", fadeout=7.0)
-    timer 160 action Quit(confirm=False)
+    timer 240 action Stop("music", fadeout=7.0)
+    timer 270 action Quit(confirm=False)
