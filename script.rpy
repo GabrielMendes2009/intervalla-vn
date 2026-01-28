@@ -869,148 +869,326 @@ label dungeon_palavras:
     jump check_dungeons
 
 label dungeon_medo:
-    scene bg memory_hospital with dissolve
-    "O cheiro vem antes da imagem."
-    "Álcool. Produtos de limpeza. Morte tentando ser escondida."
 
-    "O som dos bipes é lento. Regular. Cruel."
-    "Cada apito é um lembrete de que o tempo está ganhando."
+    scene bg memory_hospital with dissolve
+
+    "O cheiro vem antes da imagem."
+    "Álcool."
+    "Produtos de limpeza."
+    "O desespero tentando ser esterilizado."
+
+    "O corredor é branco demais."
+    "Luz demais."
+    "Como se o lugar tivesse medo de sombras."
+
+    "O som dos bipes chega antes que eu consiga ver a cama."
+    "Lento."
+    "Regular."
+    "Cruel."
+
+    "Cada apito é uma contagem regressiva que ninguém tem coragem de anunciar."
 
     show cain weak at center
 
+    "Cain está deitado."
+    "Frágil."
+    "Menor."
+
+    "Os ombros que costumavam ocupar espaço agora mal levantam o lençol."
+    "Os olhos ainda são os mesmos."
+    "Cansados — mas atentos."
+
     cw "Você demorou."
+
+    "Não há acusação."
+    "Só constatação."
+
     cw "Eu fiquei imaginando se você viria."
+    cw "Não porque eu duvidasse…"
+    cw "Mas porque eu não queria criar expectativas erradas."
 
     a "(Ele parece menor.)"
     a "(Como se o mundo estivesse encolhendo ao redor dele.)"
+    a "(Como se ele estivesse sendo gentil até ao desaparecer.)"
 
     cw "Eu vi minha mãe chorando no corredor."
-    cw "Ela tentou sorrir quando entrou."
+    cw "Ela tentou secar o rosto antes de entrar."
+
+    cw "Tentou sorrir."
+
+    "Ele fecha os olhos por um segundo."
+
     cw "Foi pior do que se ela tivesse chorado."
+
+    "O monitor apita."
+    "Pontual."
+    "Indiferente."
 
     cw "Ela vai sobreviver."
     cw "As pessoas sempre sobrevivem."
 
+    cw "Elas aprendem a acordar."
+    cw "A comer."
+    cw "A funcionar."
+
+    cw "Mesmo quando algo fica faltando."
+
+    "Ele vira o rosto levemente em minha direção."
+
     cw "Mas e você, Haruto?"
+
+    cw "Quando eu não estiver mais aqui…"
+    cw "O que vai sobrar de mim em você?"
+
     cw "Você vai me transformar em uma história bonita?"
+    cw "Algo fácil de lembrar?"
+    cw "Algo que não dói?"
+
     cw "Ou vai lembrar de mim como eu realmente fui?"
+
+    "O silêncio pesa mais que qualquer resposta."
 
     menu:
         "Você foi perfeito para mim.":
-            a "Eu me aproximo da cama."
-            a "Seguro a mão dele com força demais."
+
+            "Eu me aproximo da cama."
+            "Rápido demais."
+            "Como se o tempo fosse fugir."
+
+            a "Eu seguro a mão dele."
+            "Com força demais."
+            "Como se pudesse ancorá-lo ali."
 
             a "Você foi tudo de bom que eu tive."
             a "Você foi luz."
+            a "Você foi o melhor de mim."
+
             a "Eu vou garantir que ninguém esqueça isso."
+            a "Eu prometo."
+
+            "Cain não sorri."
+            "Ele suspira."
 
             cw "Isso soa… confortável."
+
+            cw "Reconfortante."
+            cw "Seguro."
+
             cw "Mas não é verdade."
+
+            "Ele engole em seco."
 
             cw "Eu menti."
             cw "Eu tive medo."
             cw "Eu me afastei quando mais precisava de você."
 
+            cw "Eu não fui forte."
+            cw "Eu não fui constante."
+            cw "Eu não fui fácil de amar."
+
             cw "Se você me transformar em um santo…"
             cw "Você não vai estar me lembrando."
+
             cw "Vai estar se protegendo."
 
             "O monitor cardíaco apita mais alto."
+            "O som ecoa."
             "O quarto parece mais distante."
 
+            "A memória não se fortalece."
+            "Ela se torna lisa."
+            "Sem arestas."
+            "Sem verdade."
+
         "Eu estou com raiva de você por ter escondido isso.":
-            a "Minha voz treme."
+
+            "Minha voz não sai de imediato."
+            "Ela precisa atravessar o medo primeiro."
+
+            a "Minha garganta aperta."
             a "Não de tristeza."
             a "De raiva acumulada."
 
             a "Você não confiou em mim!"
             a "Você decidiu sozinho!"
-            a "E agora eu tenho que lidar com tudo isso sem nem ter tido escolha!"
+            a "Você escolheu por nós dois!"
+
+            a "E agora…"
+            a "Agora eu tenho que lidar com isso sem nem ter tido escolha!"
+
+            "As palavras saem quebradas."
+            "Feias."
+            "Humanas."
+
+            "Cain fecha os olhos."
+            "Não para fugir."
+            "Para aguentar."
 
             cw "Isso…"
+
             cw "Isso é real."
+
+            "Ele respira fundo."
+            "Com dificuldade."
 
             cw "Eu fui egoísta."
             cw "Eu tive medo de ser fraco aos seus olhos."
 
+            cw "Medo de virar um peso."
+            cw "Medo de ser lembrado assim."
+
             cw "Não me perdoa agora."
+            cw "Você não precisa."
+
             cw "Mas não me apaga."
 
             "Os dedos dele apertam os meus."
-            "Fraco — mas presente."
+            "Fraco."
+            "Mas presente."
+
+            "O toque ancora a cena."
+            "O medo não desaparece."
+            "Mas para de dominar."
 
             $ solidez += 1
 
     $ dungeon_2_feita = True
-    "O som do monitor se dissolve."
-    "O quarto perde as paredes."
+
+    "O som do monitor começa a se distorcer."
+    "Os bipes se alongam."
+    "Virando um único tom contínuo."
+
+    "As paredes do quarto se dissolvem."
+    "O teto se abre."
+    "A luz branca se espalha como névoa."
+
     "Resta apenas o eco."
+    "E a pergunta que não tem resposta fácil."
 
     jump check_dungeons
 
 label dungeon_saudade:
     scene bg memory_future with dissolve
-    "O sol é quente."
+
+    "O sol é quente demais."
+    "Não o calor gentil do verão."
+    "Mas o calor perfeito das coisas que nunca existiram."
+
     "O céu é absurdamente azul."
-    "Tudo é bonito demais para ser real."
+    "Azul sem vento."
+    "Azul sem promessa."
 
-    show cain adult_happy at center
+    show cain adult_happy:
+        xpos 0.5
+        ypos 0.5
+        anchor (0.5, 0.5)
+        alpha 0.9
 
-    ca "Olha isso, Haruto!"
+    ca "Olha só, Haruto."
+    ca "Consegue sentir?"
+
+    ca "Nada dói."
+    ca "Nada falta."
+
     ca "A gente conseguiu."
-    ca "Sem hospitais. Sem despedidas."
+    ca "Sem hospitais."
+    ca "Sem corredores frios."
+    ca "Sem mãos escorregando das nossas."
 
     ca "Aqui ninguém morre."
-    ca "Aqui ninguém esquece."
+    ca "Aqui ninguém vira passado."
 
     ca "Fica."
-    ca "Só dessa vez."
+    ca "Só… fica."
 
     "Meu peito aperta."
+    "Não de medo."
+    "De alívio."
+
     "Porque por um segundo…"
+    "Um único segundo…"
     "Eu quase acredito."
 
     menu:
-        "Sim, eu fico. Eu não aguento mais a realidade.":
+        "Sim. Eu fico. Eu não aguento mais a realidade.":
             a "Eu estou cansado."
-            a "Cansado de enterros."
-            a "Cansado de memórias que doem."
+            a "Cansado de funerais sem corpo."
+            a "Cansado de lembrar sozinho."
 
             a "Se isso for mentira…"
-            a "Então deixa eu viver nela."
+            a "Então é a mentira mais gentil que já me contaram."
 
-            ca "Você sempre escolheu o caminho mais difícil."
-            ca "Mas dessa vez… escolheu fugir."
+            ca "Você sempre foi forte."
+            ca "Sempre foi o que ficou de pé."
 
-            ca "Se você ficar…"
-            ca "Eu desapareço de verdade."
+            ca "Mas agora…"
+            ca "Você só quer descansar."
 
-            "O sorvete derrete."
-            "Vira algo escuro."
+            ca "Se você ficar, Haruto…"
+            ca "Eu não vou doer mais."
+
+            ca "Mas eu também…"
+            ca "Vou desaparecer de verdade."
+
+            "Algo pinga na minha mão."
+            "Doce."
+            "Pegajoso."
+
+            "O sorvete começa a derreter."
+            "Escorre pelos meus dedos."
+            "Vira uma mancha escura no chão perfeito."
+
             "O céu racha."
+            "Sem barulho."
+            "Como uma tela sendo rasgada."
 
         "Isso não é Roma. É um necrotério pintado de dourado.":
             a "Minha voz falha."
-            a "Mas não recua."
+            a "Mas não abaixa."
 
             a "Isso não é vida."
             a "É uma vitrine."
+            a "Tudo bonito."
+            a "Tudo parado."
 
-            a "Você merece ser lembrado como foi."
-            a "Não como eu gostaria que tivesse sido."
+            a "Você não é isso."
+            a "Você era medo."
+            a "Era raiva."
+            a "Era silêncio quando não sabia o que dizer."
 
-            ca "Então dói assim mesmo…"
+            a "E eu amava você assim."
+
+            ca "…Então dói mesmo."
+            ca "Ser lembrado sem maquiagem."
+
             ca "Ser amado do jeito certo."
 
+            show cain adult_happy:
+                xpos 0.5
+                ypos 0.5
+                anchor (0.5, 0.5)
+                alpha 1.0
+
             "Ele sorri."
+            "Não o sorriso perfeito."
+            "Mas o verdadeiro."
+
             "Sem máscaras."
+            "Sem promessas."
             "Sem ilusões."
 
             $ solidez += 1
 
     $ dungeon_3_feita = True
-    "Roma se desfaz."
-    "Sobra apenas o vazio honesto do Intervalla."
+
+    "Roma se desfaz como um cenário desmontado às pressas."
+    "As cores escorrem."
+    "O calor morre."
+
+    "Sobra apenas o vazio."
+    "Honesto."
+    "Cruel."
+    "Real."
 
     jump check_dungeons
 
@@ -1036,18 +1214,69 @@ label coracao_intervalo:
         jump final_ruim
 
 label final_bom:
-    show cain solid at center with dissolve
-    c "Haruto. Você conseguiu. Você atravessou o lodo das nossas falhas e não soltou a minha mão."
-    a "Eu entendi agora, Cain. O marcador... {i}Memoria te servat{/i}. A memória me salva porque ela me obriga a ser honesto."
-    a "Eu não vou te esquecer. Mas eu também não vou ficar preso no que poderia ter sido."
+    scene bg intervalla_white with fade
 
-    c "Obrigado. Por me deixar ser humano uma última vez."
-    c "Agora, volte para o trem. Há uma vida inteira esperando por você."
+    show cain solid:
+        xpos 0.5
+        ypos 0.5
+        anchor (0.5, 0.5)
+        alpha 1.0
+        with dissolve
 
-    "Ele me abraça. O toque é quente, real."
+    c "Você voltou."
+    c "Eu achei que a saudade ia te vencer."
+
+    a "Ela tentou."
+    a "Usou seu rosto."
+    a "Usou tudo que eu queria que tivesse sido diferente."
+
+    a "Mas eu entendi agora."
+    a "O marcador… {i}Memoria te servat{/i}."
+    a "A memória não existe pra me poupar."
+    a "Ela existe pra me obrigar a ser honesto."
+
+    a "Eu não vou te esquecer."
+    a "Mas também não vou viver ajoelhado diante do passado."
+
+    c "…Então é assim que termina."
+
+    c "Não com esquecimento."
+    c "Mas com verdade."
+
+    c "Obrigado, Haruto."
+    c "Por não me transformar em um fantasma bonito."
+    c "Por me deixar errar."
+    c "Por me deixar ser humano…"
+    c "Uma última vez."
+
+    "Cain se aproxima."
+    "Não há luz."
+    "Não há vento."
+    "Só presença."
+
+    "Ele me abraça."
+
+    "O toque é quente."
+    "Imperfeito."
+    "Real."
+
+    c "Agora vai."
+    c "O trem ainda está te esperando."
+
+    c "Existe uma vida inteira que só pode acontecer sem mim."
+    c "E isso…"
+    c "Também é amor."
+
+    "Quando ele se afasta, Cain não desaparece."
+    "Ele apenas fica para trás."
+    "Como toda memória deve ficar."
 
     scene bg train_interior with fade
-    "Memoria te servat."
+
+    "O trem segue em frente."
+
+    "Eu seguro o marcador entre os dedos."
+    "{i}Memoria te servat.{/i}"
 
     play music "audio/credits_theme.mp3" fadein 2.0
     call screen rolling_credits
@@ -1055,10 +1284,41 @@ label final_bom:
     return
 
 label final_ruim:
-    "O mundo ao redor se torna estático. O tempo para."
-    "Cain me olha com uma tristeza infinita."
-    c "Haruto... você não deveria ter escolhido isso."
-    "Mas agora, somos apenas dois vultos sentados num banco, esperando o esquecimento chegar."
+    scene bg intervalla_empty with fade
+
+    "O mundo engasga."
+    "O tempo não avança."
+    "Ele apenas… para."
+
+    show cain faded at center with dissolve:
+        alpha 0.4
+
+    c "Haruto…"
+    c "Você escolheu ficar olhando para mim."
+    c "E esqueceu de olhar para frente."
+
+    a "…"
+
+    "Sentamos no banco."
+    "Não como antes."
+    "Sem livros."
+    "Sem futuro."
+
+    c "Daqui a pouco, ninguém mais vai dizer meu nome."
+    c "Depois disso, eu fico leve."
+    c "Tão leve que nem eu vou lembrar quem eu fui."
+
+    c "E você…"
+    c "Você vai ficar comigo até isso acontecer."
+
+    "O silêncio cresce."
+    "Não dói."
+    "Isso é o pior."
+
+    "O letreiro acima da estação pisca."
+    "{b}INTERVALLA{/b}"
+
+    "Desta vez, não há trem."
 
     play music "audio/credits_theme.mp3" fadein 2.0
     call screen rolling_credits
