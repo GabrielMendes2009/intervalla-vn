@@ -1216,12 +1216,11 @@ label coracao_intervalo:
 label final_bom:
     scene bg intervalla_white with fade
 
-    show cain solid:
+    show cain solid with dissolve:
         xpos 0.5
         ypos 0.5
         anchor (0.5, 0.5)
         alpha 1.0
-        with dissolve
 
     c "Você voltou."
     c "Eu achei que a saudade ia te vencer."
