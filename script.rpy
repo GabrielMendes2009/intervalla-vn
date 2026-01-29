@@ -779,10 +779,10 @@ label dungeon_palavras:
             "A lembrança aperta."
             "A cena avança, obediente ao que eu escolhi naquela época."
 
-            a "Eu lembro exatamente do tom da minha voz."
-            a "Impaciente."
-            a "Cansado."
-            a "Convencido demais pra perceber."
+            "Eu lembro exatamente do tom da minha voz."
+            "Impaciente."
+            "Cansado."
+            "Convencido demais pra perceber."
 
             a "Cain, você pensa demais."
             a "A vida não é um poema trágico."
@@ -833,12 +833,12 @@ label dungeon_palavras:
             "A memória hesita."
             "Como se não tivesse certeza de que pode mudar."
 
-            a "Eu fecho o livro."
+            "Eu fecho o livro."
             "Devagar."
             "Com cuidado demais."
 
-            a "Como se esse gesto pudesse atravessar o tempo."
-            a "Como se pudesse alcançar você."
+            "Como se esse gesto pudesse atravessar o tempo."
+            "Como se pudesse alcançar você."
 
             a "Eu estava tão ocupado tentando ser alguém…"
             a "Que não percebi que estava deixando você sozinho bem do meu lado."
@@ -944,9 +944,9 @@ label dungeon_medo:
     cw "Não porque eu duvidasse…"
     cw "Mas porque eu não queria criar expectativas erradas."
 
-    a "(Ele parece menor.)"
-    a "(Como se o mundo estivesse encolhendo ao redor dele.)"
-    a "(Como se ele estivesse sendo gentil até ao desaparecer.)"
+    "(Ele parece menor.)"
+    "(Como se o mundo estivesse encolhendo ao redor dele.)"
+    "(Como se ele estivesse sendo gentil até ao desaparecer.)"
 
     cw "Eu vi minha mãe chorando no corredor."
     cw "Ela tentou secar o rosto antes de entrar."
@@ -999,7 +999,7 @@ label dungeon_medo:
             "Rápido demais."
             "Como se o tempo fosse fugir."
 
-            a "Eu seguro a mão dele."
+            "Eu seguro a mão dele."
             "Com força demais."
             "Como se pudesse ancorá-lo ali."
 
