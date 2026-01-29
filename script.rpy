@@ -103,6 +103,7 @@ label start:
         "Por que você sumiu?":
             $ conversou_trem = True
             $ haruto_magoado = True
+            $ renpy.block_rollback()
 
             a "Hábitos?"
             a "Você fala de hábitos depois de desaparecer da face da terra?"
@@ -122,6 +123,7 @@ label start:
 
         "Você parece diferente.":
             $ haruto_observador = True
+            $ renpy.block_rollback()
 
             a "Você está estranho, Cain."
             a "Onde está o sarcasmo?"
@@ -290,6 +292,7 @@ label dia_seguinte:
     menu:
         "…":
             $ culpa_haruto = True
+            $ renpy.block_rollback()
 
             "Eu apertei o marcador dentro do bolso."
             "As bordas de papel machucaram meus dedos."
@@ -301,6 +304,7 @@ label dia_seguinte:
 
         "Não pensar.":
             $ negacao_haruto = True
+            $ renpy.block_rollback()
 
             "Eu encarei a lousa."
             "Os números escritos nela não faziam sentido."
@@ -425,6 +429,7 @@ label rupturas_expandidas:
     menu:
         "Estender a mão.":
             $ travessia_aceita = True
+            $ renpy.block_rollback()
 
             "Meu braço se moveu antes do pensamento."
             "Antes do medo."
@@ -435,7 +440,7 @@ label rupturas_expandidas:
 
         "Ficar parado.":
             $ travessia_hesitacao = True
-
+            $ renpy.block_rollback()
             "Eu congelei."
             "O chão parecia distante demais."
             "Meu corpo pesado demais."
@@ -769,6 +774,7 @@ label dungeon_palavras:
 
     menu:
         "Você está sendo dramático, Cain.":
+            $ renpy.block_rollback()
 
             "A lembrança aperta."
             "A cena avança, obediente ao que eu escolhi naquela época."
@@ -822,6 +828,7 @@ label dungeon_palavras:
             "Foi indiferença."
 
         "Eu sinto muito por não ter te visto.":
+            $ renpy.block_rollback()
 
             "A memória hesita."
             "Como se não tivesse certeza de que pode mudar."
@@ -986,6 +993,7 @@ label dungeon_medo:
 
     menu:
         "Você foi perfeito para mim.":
+            $ renpy.block_rollback()
 
             "Eu me aproximo da cama."
             "Rápido demais."
@@ -1043,6 +1051,7 @@ label dungeon_medo:
             "Sem verdade."
 
         "Eu estou com raiva de você por ter escondido isso.":
+            $ renpy.block_rollback()
 
             "Minha voz não sai de imediato."
             "Ela precisa atravessar o medo primeiro."
@@ -1165,6 +1174,7 @@ label dungeon_saudade:
 
     menu:
         "Sim. Eu fico. Eu não aguento mais a realidade.":
+            $ renpy.block_rollback()
             a "Eu estou cansado."
             a "Cansado de funerais sem corpo."
             a "Cansado de lembrar sozinho."
@@ -1197,6 +1207,7 @@ label dungeon_saudade:
             "Como uma tela sendo rasgada."
 
         "Isso não é Roma. É um necrotério pintado de dourado.":
+            $ renpy.block_rollback()
 
             stop music fadeout 1.0
             play music "audio/final_theme.mp3" fadein 2.0 loop
