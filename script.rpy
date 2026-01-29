@@ -1415,6 +1415,8 @@ transform credits_scroll:
 
 screen rolling_credits():
 
+    $ renpy.block_rollback()
+
     tag credits
 
     add Solid("#000")
@@ -1542,6 +1544,9 @@ screen rolling_credits():
             spacing 8
             text "Gabriel Mendes" size 40 xalign 0.5
             text "github.com/GabrielMendes2009" size 30 xalign 0.5 color "#aaaaaa"
+
+            text "Manuel Miranda" size 40 xalign 0.5
+            text "github.com/manuelm11-bit" size 30 xalign 0.5 color "#aaaaaa"
 
         null height 100
 
