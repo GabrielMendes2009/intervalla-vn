@@ -1561,6 +1561,7 @@ screen rolling_credits():
             null height 10
 
             text "Cou" size 40 xalign 0.5
+            text "@Pedrixit" size 30 xalign 0.5 color "#aaaaaa"
         
             null height 10
 
