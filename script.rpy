@@ -1463,11 +1463,6 @@ screen rolling_credits():
             text "www.craiyon.com" size 30 xalign 0.5 color "#aaaaaa"
 
             null height 10
-
-            text "Makoto Shinkai" size 40 xalign 0.5
-            text "@makoto.shinkai" size 30 xalign 0.5 color "#aaaaaa"
-
-            null height 10
             
             text "Foxeleos" size 40 xalign 0.5
             text "deviantart.com/foxeleos" size 30 xalign 0.5 color "#aaaaaa"
