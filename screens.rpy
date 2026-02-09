@@ -770,6 +770,16 @@ screen preferences():
                 box_wrap True
 
                 vbox:
+                    style_prefix "radio"
+                    label _("Idioma")
+
+                    textbutton _("Português (Brasil)"):
+                        action Language(None)
+
+                    textbutton _("Português (Portugal)"):
+                        action Language("ptpt")
+
+                vbox:
 
                     label _("Velocidade do texto")
 
