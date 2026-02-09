@@ -1366,7 +1366,7 @@ translate ptpt a_travessia_detalhada_6dd057e1:
 translate ptpt a_travessia_detalhada_4c9b3f89:
 
     # "O mesmo trem."
-    "O mesmo trem."
+    "O mesmo comboio."
 
 # game/script.rpy:474
 translate ptpt a_travessia_detalhada_8141e44e:
